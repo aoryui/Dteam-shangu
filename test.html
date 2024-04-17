@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>サンプル</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>サンプル</title>
+  </head>
+  <body>
+    <header>
+      <h1>ヘッダー</h1>
+    </header>
 
-<p>サンプルページです。</p>
+    <p>サンプルページです。</p>
 
-<p>
-<label>名前：<input type="text" id="nameText"></label>
-<input type="button" value="Check" id="checkButton">
-</p>
+    <p>
+      <label>名前：<input type="text" id="nameText"></label>
+      <input type="button" value="Check" id="checkButton">
+    </p>
 
-<p id="msg"></p>
+    <p id="msg"></p>
 
-<script>
-function buttonClick(){
-  msg.innerText = '回答は' + nameText.value + 'です';
-}
+    <footer>
+      <p>&copy; team D</p>
+    </footer>
 
-let nameText = document.getElementById('nameText');
-nameText.value = '';
-let msg = document.getElementById('msg');
+    <script>
+    function buttonClick(){
+      msg.innerText = '回答は' + nameText.value + 'です';
+    }
 
-let checkButton = document.getElementById('checkButton');
-checkButton.addEventListener('click', buttonClick);
-</script>
+    let nameText = document.getElementById('nameText');
+    nameText.value = '';
+    let msg = document.getElementById('msg');
 
-</body>
+    let checkButton = document.getElementById('checkButton');
+    checkButton.addEventListener('click', buttonClick);
+    </script>
+
+  </body>
 </html>
