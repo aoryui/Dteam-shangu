@@ -9,5 +9,5 @@ displayButton.addEventListener('click', () => {
     const inputValue = inputField.value;
     
     // 取得した値を表示エリアに表示
-    outputDiv.textContent = '結果は' + inputValue + "です。";
+    outputDiv.textContent = inputValue;
 });
