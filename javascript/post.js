@@ -28,12 +28,8 @@ button1.addEventListener('click', () => {
     window.location.href = 'timeline.html';
 });
 
-button2.addEventListener('click', () => {
-    // ページ2に遷移
-    window.location.href = 'trend.html';
-});
 
-button3.addEventListener('click', () => {
+button2.addEventListener('click', () => {
     // ページ3に遷移
     window.location.href = 'question.html';
 });

@@ -11,3 +11,13 @@ displayButton.addEventListener('click', () => {
     // 取得した値を表示エリアに表示
     outputDiv.textContent = inputValue;
 });
+
+button1.addEventListener('click', () => {
+    // ページ1に遷移
+    window.location.href = 'timeline.html';
+});
+
+button3.addEventListener('click', () => {
+    // ページ2に遷移
+    window.location.href = 'post.html';
+});
