@@ -20,7 +20,7 @@ loginForm.addEventListener('submit', (event) => {
 
         // メイン画面への遷移
         // メイン画面のURLを指定して画面遷移
-        window.location.href = 'file:///C:/Users/%E6%98%A5%E6%9C%A8%E3%80%80%E6%B5%B7%E6%96%97/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/Dteam-shangu-1/post.html';
+        window.location.href = 'file:///C:/Users/%E6%98%A5%E6%9C%A8%E3%80%80%E6%B5%B7%E6%96%97/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/Dteam-shangu-2/post.html';
     } else {
         // ログイン失敗時の処理
         loginResult.textContent = 'メールアドレスまたはパスワードが間違っています。';

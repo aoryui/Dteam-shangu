@@ -22,8 +22,29 @@
         </form>
         <!-- 結果表示エリア -->
         <div id="loginResult"></div>
+        <p>新規登録ですか？ <a href="#" id="showRegister">新規登録</a></p>
     </div>
     
+    <!-- 新規登録画面作成-->
+    <div id="registerSection" style="display: none;">
+        <h2>新規登録</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="registerEmail">メールアドレス:</label>
+                <input type="email" id="registerEmail" name="registerEmail" placeholder="メールアドレスを入力" required>
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">パスワード:</label>
+                <input type="password" id="registerPassword" name="registerPassword" placeholder="パスワードを入力" required>
+            </div>
+            <button type="submit">登録</button>
+        </form>
+    <div id="registerResult"></div>
+        <p>既にアカウントをお持ちですか？ <a href="#" id="showLogin">ログイン</a></p>
+        </div>
+    </div>
+
+
     <!-- JavaScriptファイルを読み込む -->
     <script src="script.js"></script>
 </body>
