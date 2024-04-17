@@ -3,36 +3,54 @@
   <head>
     <meta charset="UTF-8">
     <title>サンプル</title>
+    <style type="text/css"> textarea {
+        resize: none;
+        width:800px;
+        height:200px;
+      }
+    </style>
   </head>
+
   <body>
     <header>
       <h1>ヘッダー</h1>
     </header>
 
-    <p>サンプルページです。</p>
+    <div id="post">
+      <form>
+          <textarea rows="10" cols="50" id="post_text" placeholder="テキスト入力してね"></textarea><br>
+          <input type="submit" value="投稿">
+      </form>
+    </div>
 
-    <p>
-      <label>名前：<input type="text" id="nameText"></label>
-      <input type="button" value="Check" id="checkButton">
-    </p>
+    <div id="result"></div>
 
-    <p id="msg"></p>
 
     <footer>
       <p>&copy; team D</p>
     </footer>
 
     <script>
-    function buttonClick(){
-      msg.innerText = '回答は' + nameText.value + 'です';
-    }
+      const Post_Text = document.getElementById('post_text');
+      const Result = document.getElementById('result');
+      const SubmitButton = document.querySelector('input[type="submit"]');
 
-    let nameText = document.getElementById('nameText');
-    nameText.value = '';
-    let msg = document.getElementById('msg');
+      SubmitButton.addEventListener('click', function(event) {
+        event.preventDefault(); // デフォルトの送信動作をキャンセル
 
-    let checkButton = document.getElementById('checkButton');
-    checkButton.addEventListener('click', buttonClick);
+        // 入力されたテキストを取得
+        const text = Post_Text.value;
+
+        // 改行を `<br>` タグに変換
+        const convertedText = text.replace(/\r\n|\r|\n/g, '<br>');
+
+        // 結果表示エリアにテキストを表示
+        Result.innerHTML = convertedText;
+
+        // フォームとボタンを非表示
+        document.getElementById('post').style.display = 'none';
+      });
+
     </script>
 
   </body>
