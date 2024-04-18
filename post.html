@@ -10,15 +10,12 @@
     <header>
       <button id="button1">タイムライン</button>  
       <button id="button2">質問</button>
-      <h1>ヘッダー</h1>
+      <a>記事内検索</a>
+      <!-- 検索バー -->
+      <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
     </header> 
 
-    <h1>記事内検索</h1>
-        <!-- 検索バー -->
-        <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
-
-
-    <div id="post">
+    <div id="contents">
       <form>
           <textarea rows="10" cols="50" id="post_text" placeholder="テキスト入力してね"></textarea><br>
           <input type="submit" value="投稿">

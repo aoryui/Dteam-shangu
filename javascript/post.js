@@ -20,7 +20,7 @@ const convertedText = text.replace(/\r\n|\r|\n/g, '<br>');
 Result.innerHTML = convertedText;
 
 // フォームとボタンを非表示
-document.getElementById('post').style.display = 'none';
+document.getElementById('contents').style.display = 'none';
 });
 
 button1.addEventListener('click', () => {

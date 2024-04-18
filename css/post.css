@@ -1,12 +1,5 @@
 /* 投稿画面のCSS */
 
-/* テキストエリアのサイズ */
-textarea {
-    resize: none;
-    width:800px;
-    height:200px;
-}
-
 /* ボタンコンテナのスタイリング */
 .button-container {
     text-align: center;
@@ -25,4 +18,21 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+
+#contents{
+    width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* テキストエリアのサイズ */
+textarea {
+    resize: none;
+    width:1000px;
+    height:500px;
+    font-size: 15px;
 }
