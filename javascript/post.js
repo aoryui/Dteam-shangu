@@ -6,9 +6,19 @@ const button2 = document.getElementById('button2');
 const button3 = document.getElementById('button3');
 
 
+button1.addEventListener('click', () => {
+    // ページ1に遷移
+    window.location.href = 'timeline.html';
+});
 
-SubmitButton.addEventListener('click', function(event) {
-event.preventDefault(); // デフォルトの送信動作をキャンセル
+
+button2.addEventListener('click', () => {
+    // ページ3に遷移
+    window.location.href = 'question.html';
+});
+
+
+function post(){
 
 // 入力されたテキストを取得
 const text = Post_Text.value;
@@ -21,15 +31,4 @@ Result.innerHTML = convertedText;
 
 // フォームとボタンを非表示
 document.getElementById('post-container').style.display = 'none';
-});
-
-button1.addEventListener('click', () => {
-    // ページ1に遷移
-    window.location.href = 'timeline.html';
-});
-
-
-button2.addEventListener('click', () => {
-    // ページ3に遷移
-    window.location.href = 'question.html';
-});
+};
