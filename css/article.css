@@ -48,6 +48,6 @@ li:before {
 }
 
 /* 日付 */
-a {
+#contents a {
     float: right;
 }
