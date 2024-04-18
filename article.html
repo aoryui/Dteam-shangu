@@ -1,0 +1,35 @@
+<!-- 記事のHTML -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>記事</title>
+    <link rel="stylesheet" type="text/css" href="./css/article.css">
+  </head>
+
+  <body>
+    <header>
+      <button id="button1">タイムライン</button>  
+      <button id="button2">質問</button>
+      <a>記事内検索</a>
+      <!-- 検索バー -->
+      <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
+    </header> 
+
+    <div id="contents">
+        <h1>ここにタイトル</h1>
+        <li>Python</li><li>Docker</li><li>AWS</li>
+        <a>20XX/XX/XX 00:00:00</a>
+        <p>なんとかかんとかで、あるからして</p>
+        <p>ホゲホゲのフガフガ</p>
+        <p>これはバナナ、あれはしいたけ</p>
+    </div>
+
+    <footer>
+      <p>&copy; team D</p>
+    </footer>
+
+    <!-- JavaScriptファイルを読み込む -->
+    <script src="./javascript/article.js"></script>
+  </body>
+</html>
