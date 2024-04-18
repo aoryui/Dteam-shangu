@@ -17,14 +17,27 @@
     </header> 
 
     <div id="contents">
-        <h1>ここにタイトル</h1>
-        <li>Python</li><li>Docker</li><li>AWS</li>
+        <span class="user"></span>
+        <b>ジンクス</b>
         <a>20XX/XX/XX 00:00:00</a>
-        <p>なんとかかんとかで、あるからして</p>
-        <p>ホゲホゲのフガフガ</p>
-        <p>これはバナナ、あれはしいたけ</p>
+        <h1>ここにタイトル</h1>
+        <li>Python</li><li>Docker</li><li>AWS</li><li>ポエム</li>
+        <p>この文章は、</p>
+        <p>とても役に立つ文章であります。</p>
+        <p>なんと素晴らしい文章なことでしょう。</p>
     </div>
 
+    <div id="reply">
+      <span class="user"></span>
+      <form id="reply-container">
+        <div class="FlexTextarea">
+          <div class="FlexTextarea__dummy" aria-hidden="true"></div>
+          <textarea id="post_text" class="FlexTextarea__textarea" placeholder="コメントを入力…"></textarea>
+        </div>
+        <input type="button" onclick="reply()" value="送信">
+      </form>
+      <div id="result"></div>
+    </div>
     <footer>
       <p>&copy; team D</p>
     </footer>
