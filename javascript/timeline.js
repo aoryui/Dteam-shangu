@@ -1,11 +1,7 @@
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 
-<<<<<<< HEAD
 button3.addEventListener('click', () => {
-=======
-button1.addEventListener('click', () => {
->>>>>>> 33af7c037d9c70aa3f212c341adab4ff45f6fef1
     // 投稿に遷移
     window.location.href = 'post.html';
 });
