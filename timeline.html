@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <link rel="stylesheet" type="text/css" href="./css/post.css">
+        <meta charset="UTF-8">
+        <title>タイムライン画面
+        </title>
+        <link rel="stylesheet" type="text/css" href="./css/timeline.css">
     </head>
     <body>
         <header>
@@ -10,13 +13,33 @@
             <a>記事内検索</a>
             <!-- 検索バー -->
             <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
-            <h1>タイムライン</h1>
         </header> 
 
         <div id="contents">
-        
+            <span class="user"></span>
+            <b>山田太郎</b>
+            <a>20XX/XX/XX 00:00:00</a>
+            <h1>ここにタイトル</h1>
+            <p style="position:absolute; top: 140px; left:500px">
+                <img src="スクリーンショット 2024-04-19 024204.png" width="70%">
+            <li>html</li><li>css</li><li>javascript</li>
+            <p>チーム製作、</p>
+            <p>WEBで学校のホームページを作った!</p>
         </div>
-
+          
+        <div id="contents">
+            <span class="user"></span>
+            <b>山田太郎</b>
+            <a>20XX/XX/XX 00:00:00</a>
+            <h1>ここにタイトル</h1>
+            <p style="position:absolute; top: 140px; left:500px">
+                <img src="スクリーンショット 2024-04-19 024204.png" width="70%">
+            <li>html</li><li>css</li><li>javascript</li>
+            <p>チーム製作、</p>
+            <p>WEBで学校のホームページを作った!</p>
+        </div>
+          
+        
         <footer>
             <p>&copy; team D</p>
         </footer>
