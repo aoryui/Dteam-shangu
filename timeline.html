@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta charset="UTF-8">
-        <title>タイムライン画面
-        </title>
-        <link rel="stylesheet" type="text/css" href="./css/timeline.css">
+        <link rel="stylesheet" type="text/css" href="./css/post.css">
     </head>
     <body>
         <header>
@@ -13,12 +10,21 @@
             <a>記事内検索</a>
             <!-- 検索バー -->
             <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
+            <h1>タイムライン</h1>
         </header> 
 
-        <div id="contents">
-        
-        </div>
+        <div class="container">            
+            <div id="contents">
 
+            <div id="timeline" class="timeline"></div>
+            </div>
+            <div class="input-form">
+                <input type="text" id="eventTime" placeholder="時間">
+                <input type="text" id="eventDescription" placeholder="項目・イベントの入力">
+                <button onclick="addEvent()">イベントを追加</button>
+            </div>
+        </div>
+        
         <footer>
             <p>&copy; team D</p>
         </footer>
