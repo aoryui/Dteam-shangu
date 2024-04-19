@@ -1,0 +1,53 @@
+/* 投稿画面のCSS */
+
+/* ボタンコンテナのスタイリング */
+.button-container {
+    text-align: center;
+    margin: 50px auto;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#contents{
+    width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    margin: 10px 10px 20px 10px;
+}
+/* タグ */
+li {
+	display: inline-block;
+	margin: 0 .5em .6em 0;
+	padding: .5em;
+	line-height: .5;
+	text-decoration: none;
+	color: #000000;
+	background-color: #EDEEEE;
+	border-radius: 2em;
+}
+li:before {
+	content: "#";	
+}
+
+/* 日付 */
+#contents a {
+    float: right;
+}

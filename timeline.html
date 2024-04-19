@@ -1,8 +1,34 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="./css/post.css">
-</head>
-<button id="button3">ホーム</button>
-<button id="button2">質問</button>
-<h1>タイムライン</h1>
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/post.css">
+    </head>
+    <body>
+        <header>
+            <button id="button3">投稿</button>  
+            <button id="button2">質問</button>
+            <a>記事内検索</a>
+            <!-- 検索バー -->
+            <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
+            <h1>タイムライン</h1>
+        </header> 
 
-<script src="./javascript/timeline.js"></script>
+        <div class="container">            
+            <div id="contents">
+
+            <div id="timeline" class="timeline"></div>
+            </div>
+            <div class="input-form">
+                <input type="text" id="eventTime" placeholder="時間">
+                <input type="text" id="eventDescription" placeholder="項目・イベントの入力">
+                <button onclick="addEvent()">イベントを追加</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; team D</p>
+        </footer>
+
+        <script src="./javascript/timeline.js"></script>
+    </body>
+</html>
