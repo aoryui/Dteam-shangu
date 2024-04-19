@@ -31,6 +31,7 @@ button:hover {
 
 h1{
     margin: 10px 10px 20px 10px;
+    padding: .5em;
 }
 /* タグ */
 li {
@@ -50,4 +51,92 @@ li:before {
 /* 日付 */
 #contents a {
     float: right;
+
+}
+
+
+#reply{
+    width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* テキストエリアのサイズ */
+textarea {
+    resize: none;
+    width:200px;
+    height:50px;
+    font-size: 15px;
+}
+
+/* テキストエリアのフレックス*/
+.FlexTextarea {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .FlexTextarea__dummy {
+    overflow: hidden;
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    min-height: 120px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border: 1px solid;
+  }
+  
+  .FlexTextarea__textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid #b6c3c6;
+    border-radius: 4px;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    resize: none;
+  }
+
+/* ユーザーアイコン */
+.user {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: #89baeb;
+    width: 1em;
+    height: 1em;
+    font-size: 30px;
+    overflow: hidden;
+}
+.user::before,
+.user::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: #3388dd;
+    content: "";
+}
+.user::before {
+    top: 0.15em;
+    width: 0.4em;
+    height: 0.4em;
+}
+.user::after {
+    bottom: -0.4em;
+    width: 0.8em;
+    height: 0.8em;
 }
