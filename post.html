@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>投稿ページ</title>
-    <link rel="stylesheet" type="text/css" href="./css/post.css">
-  </head>
 
-  <body class="body">
-    <!-- ヘッダー -->
-      <!-- ヘッダー上部 -->
-      <div class="header1">
-        <!-- ハンバーガーメニューボタン -->
-        <button id="menu">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
-        </button>
-        <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
-      </div>
-      <!-- ヘッダー下部 -->
-      <div class="header2">
-        <div class="left-item">
-          <button class="timelinebtn" id="timeline">タイムライン</button>  
-        </div>
-        <div class="right-item">
-          <button class="questionbtn" id="question">質問</button>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <title>投稿ページ</title>
+  <link rel="stylesheet" type="text/css" href="./css/post.css">
+</head>
 
-    <!-- ポスト -->
-    <div id="contents">
-      <form id="post-container">
-          <textarea rows="10" cols="50" id="post_text" placeholder="テキスト入力してね"></textarea><br>
-          <input type="button" id="post" onclick="post()" value="投稿">
-      </form>
-      <div id="result"></div><div id="time"></div>
+<body class="body">
+  <!-- ヘッダー -->
+  <!-- ヘッダー上部 -->
+  <div class="header1">
+    <!-- ハンバーガーメニューボタン -->
+    <button id="menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+        <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+      </svg>
+    </button>
+    <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
+  </div>
+  <!-- ヘッダー下部 -->
+  <div class="header2">
+    <div class="left-item">
+      <button class="timelinebtn" id="timeline">タイムライン</button>
     </div>
+    <div class="right-item">
+      <button class="questionbtn" id="question">質問</button>
+    </div>
+  </div>
 
-    <footer>
-      <p>&copy; team D</p>
-    </footer>
+  <!-- ポスト -->
+  <div id="contents">
+    <form id="post-container">
+      <input type="text" id="post_title" placeholder="記事タイトル"><br><br>
+      <input type="text" id="post_tag" placeholder="タグを入力してください"><br><br>
+      <textarea rows="10" cols="50" id="post_text" placeholder="テキスト入力してね"></textarea><br>
+      <input type="button" onclick="post()" value="投稿">
+    </form>
+    <div id="result"></div>
+    <div id="time"></div>
+  </div>
 
-    <!-- JavaScriptファイルを読み込む -->
-    <script src="./javascript/post.js"></script>
-  </body>
+  <footer>
+    <p>&copy; team D</p>
+  </footer>
+
+  <!-- JavaScriptファイルを読み込む -->
+  <script src="./javascript/post.js"></script>
+</body>
+
 </html>
