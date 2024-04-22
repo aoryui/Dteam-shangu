@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>プログラミング情報共有サイト</title>
+    <link rel="stylesheet" type="text/css" href="./css/question.css">
+</head>
+
+<body>
+    <div class="header1">
+        <!-- 検索バー -->
+        <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
+
+    </div>
+    <div class="header2">
+
+        <div class="left-item">
+            <button id="button1">タイムライン</button>
+        </div>
+
+        <div class="right-item">
+            <button id="button2">質問</button>
+        </div>
+
+    </div>
+
+    <!-- 質問入力欄 -->
+    <!-- <input type="text" id="questionInput" placeholder="質問を入力してください"> -->
+    <div id="contents">
+        <form id="post-container">
+            <div>1111111</div>
+        </form>
+        <div id="result"></div>
+    </div>
+    
+    <div id="contents">
+        <form id="post-container">
+            <textarea rows="10" cols="50" id="post_text" placeholder="質問を入力してください"></textarea><br>
+            <input type="button" onclick="post()" value="質問する">
+        </form>
+        <div id="result"></div>
+    </div>
+
+    
+    <!-- ボタン -->
+    <button onclick="getAnswer()">回答を表示</button>
+
+    <!-- 回答表示用の要素 -->
+    <div id="answerDisplay"></div>
+    </div>
+
+
+    <!-- JavaScriptファイルを読み込む -->
+    <script src="./javascript/question.js"></script>
+</body>
+
+</html>
