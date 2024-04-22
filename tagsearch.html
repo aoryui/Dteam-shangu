@@ -1,0 +1,28 @@
+<!-- タグ検索画面 -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>タグ検索画面</title>
+        <link rel="stylesheet" type="text/css" href="./css/tagsearch.css">
+    </head>
+    <body>
+        <header>
+            <button id="button3">投稿</button>  
+            <button id="button2">質問</button>
+            <h1>タグ検索画面</h1>
+            <!-- 検索バー -->
+            <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
+        </header> 
+        
+        <li id="Tag"></li>
+        <!-- <div id="contents">
+            <a>20XX/XX/XX 00:00:00</a>
+            <h2>タイトル</h2>
+            <p>内容</p>
+            <li>タグ</li>
+        </div> -->
+
+        <script src="./javascript/tagsearch.js"></script>
+    </body>
+</html>
