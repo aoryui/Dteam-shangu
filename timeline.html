@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta charset="UTF-8">
-        <title>タイムライン画面
-        </title>
-        <link rel="stylesheet" type="text/css" href="./css/timeline.css">
+        <link rel="stylesheet" type="text/css" href="./css/post.css">
     </head>
     <body>
         <header>
@@ -13,12 +10,22 @@
             <a>記事内検索</a>
             <!-- 検索バー -->
             <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
+            <h1>タイムライン</h1>
         </header> 
 
-        <div id="contents">
-        
+        <div class="container">            
+            <div id="contents">
+                <span class="user"></span>
+                <b>ジンクス</b>
+                <a>20XX/XX/XX 00:00:00</a>
+                <h1>ここにタイトル</h1>
+                <li>Python</li><li>Docker</li><li>AWS</li><li>ポエム</li>
+                <p>この文章は、</p>
+                <p>とても役に立つ文章であります。</p>
+                <p>なんと素晴らしい文章なことでしょう。</p>
+            </div>
         </div>
-
+        
         <footer>
             <p>&copy; team D</p>
         </footer>

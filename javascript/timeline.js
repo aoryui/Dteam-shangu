@@ -39,3 +39,6 @@ function addEvent() {
     document.getElementById('eventTime').value = '';
     document.getElementById('eventDescription').value = '';
 }
+
+// find関数を使った検索フォーム
+
