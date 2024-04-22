@@ -12,7 +12,6 @@
 
 #menu {
     float: left;
-    ;
 }
 
 /* 検索ボックス */
@@ -90,7 +89,7 @@
     margin: 50px auto;
 }
 
-button {
+.button {
     margin: 10px;
     padding: 10px 20px;
     background-color: #4CAF50;

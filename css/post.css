@@ -13,7 +13,8 @@
 
 #menu {
     float: left;
-    ;
+    background-color: transparent;
+    border:none;
 }
 
 /* 検索ボックス */
