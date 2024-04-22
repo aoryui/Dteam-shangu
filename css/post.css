@@ -97,19 +97,3 @@ textarea {
     height: 500px;
     font-size: 15px;
 }
-
-/* タイトルエリアのサイズ */
-#post_title {
-    resize: none;
-    width: 1000px;
-    height: 30px;
-    font-size: 15px;
-}
-
-/* タグエリアのサイズ */
-#post_tag {
-    resize: none;
-    width: 1000px;
-    height: 30px;
-    font-size: 15px;
-}
