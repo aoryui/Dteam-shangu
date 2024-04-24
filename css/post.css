@@ -110,3 +110,11 @@ textarea {
     height: 500px;
     font-size: 15px;
 }
+
+#postbtn{
+    height: 50px;
+    width: 50px;
+    margin-left:90%;
+    border:none;
+    background-color: #68B7F0;
+}
