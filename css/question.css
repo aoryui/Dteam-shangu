@@ -12,6 +12,8 @@
 
 #menu {
     float: left;
+    background-color: #68B7F0;
+    border: none;
 }
 
 /* 検索ボックス */
