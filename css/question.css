@@ -89,20 +89,11 @@
     margin: 50px auto;
 }
 
-.button {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
 #reply_btn {
     margin: 10px;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #68B7F0;
     color: white;
     border: none;
     border-radius: 4px;
@@ -111,7 +102,7 @@
 
 
 button:hover {
-    background-color: #45a049;
+    background-color: #68B7F0;
 }
 
 
