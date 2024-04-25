@@ -66,6 +66,13 @@
     width: 50%;
 }
 
+/*時刻表示*/
+#time{
+    position: absolute;
+    top: 165px;
+    right: 145px;
+  }
+
 /* 質問ボタン */
 #question {
     border: none;
