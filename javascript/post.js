@@ -35,22 +35,12 @@ function post(){
     const convertedTag = tag.replace(/\r\n|\r|\n/g, '<br>');
     const convertedText = text.replace(/\r\n|\r|\n/g, '<br>');
 
-    const currentDate = new Date();
-    
-    // 時間をフォーマット
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth() + 1; // 月は0から始まるため、1を加える
-    const day = currentDate.getDate();
+    // 日付をYYYYMMDD形式で取得
+    var dt = new Date();
+    var year = dt.getFullYear();
+    var month = ("00" + (dt.getMonth()+1)).slice(-2);
+    var day = ("00" + (dt.getDate())).slice(-2);
 
-
-    // 結果表示エリアにテキストを表示
-    Result1.innerHTML = convertedTitle;
-    Result2.innerHTML = convertedTag;
-    Result.innerHTML = convertedText;
-
-
-    //日時標示
-    timeDisplay.textContent = year + '年' + month + '月' + day + '日';
-    // フォームとボタンを非表示
-    document.getElementById('post-container').style.display = 'none';
+    // articleに入力をもってくよ！
+    window.location.href = 'article.html?title=' + convertedTitle + '&tag=' + convertedTag + '&text=' + convertedText + '&year=' + year + '&month=' + month + '&day=' + day;
 };

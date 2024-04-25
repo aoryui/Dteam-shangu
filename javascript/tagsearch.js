@@ -18,7 +18,7 @@ button2.addEventListener('click', () => {
 // URLから検索されたタグ名を受け取る
 const Tag = document.getElementById('Tag');
 const urlParams = new URLSearchParams(window.location.search);
-let data = urlParams.get('data');
+let data = urlParams.get('tag');
 
 // タグが日本語の場合英語に置き換える
 switch (data){
@@ -80,7 +80,7 @@ if (tagname[data]) {
 }
 
 // キーの数を取得
-const numberOfKeys = Object.keys(poemText).length;
+const numberOfKeys = Object.keys(PostText).length;
 
 for (let i = 1; i <= numberOfKeys; i++) {
   console.log(i)
