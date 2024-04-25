@@ -7,21 +7,25 @@
 </head>
 
 <body>
+    <!-- ヘッダー -->
+    <!-- ヘッダー上部 -->
     <div class="header1">
-        <!-- 検索バー -->
+        <!-- ハンバーガーメニューボタン -->
+        <button id="menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+        </button>
         <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
-
     </div>
+    <!-- ヘッダー下部 -->
     <div class="header2">
-
         <div class="left-item">
-            <button id="button1">タイムライン</button>
+            <button class="timelinebtn" id="timeline" onclick="location.href='timeline.html'">タイムライン</button>
         </div>
-
         <div class="right-item">
-            <button id="button2">質問</button>
+            <button class="questionbtn" id="question">質問</button>
         </div>
-
     </div>
 
     <!-- 質問入力欄 -->
@@ -36,8 +40,32 @@
 
     <div id="contents">
         <form id="post-container">
-            <div>1111111</div>
-            <button type="button" id="reply_btn" onclick="location.href='question3.html'">返信</button>
+            <div> Hello Worldするための基本構文はなんですか？</div>
+            <button type="button" class="reply_btn" onclick="location.href='question3.html'">回答</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <div id="contents">
+        <form id="post-container">
+            <div>初めてプログラミング言語学びますが、初心者におすすめな言語を教えてください。</div>
+            <button type="submit" class="reply_btn">回答</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <div id="contents">
+        <form id="post-container">
+            <div>githubの権限の渡し方を教えてください。</div>
+            <button type="submit" class="reply_btn">回答</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <div id="contents">
+        <form id="post-container">
+            <div>環境構築を教えてください。</div>
+            <button type="submit" class="reply_btn">回答</button>
         </form>
         <div id="result"></div>
     </div>
@@ -45,31 +73,7 @@
     <div id="contents">
         <form id="post-container">
             <div>これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居</div>
-            <button type="submit">返信</button>
-        </form>
-        <div id="result"></div>
-    </div>
-
-    <div id="contents">
-        <form id="post-container">
-            <div>これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居</div>
-            <button type="submit">返信</button>
-        </form>
-        <div id="result"></div>
-    </div>
-
-    <div id="contents">
-        <form id="post-container">
-            <div>これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居</div>
-            <button type="submit">返信</button>
-        </form>
-        <div id="result"></div>
-    </div>
-
-    <div id="contents">
-        <form id="post-container">
-            <div>これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居これはテストです紙芝居</div>
-            <button type="submit">返信</button>
+            <button type="submit" class="reply_btn">回答</button>
         </form>
         <div id="result"></div>
     </div>

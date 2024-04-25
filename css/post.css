@@ -13,13 +13,26 @@
 
 #menu {
     float: left;
-    ;
+    background-color: transparent;
+    border:none;
 }
 
 /* 検索ボックス */
 #searchInput {
     float: right;
     font-size: 25px;
+}
+
+#notice{
+    float: right;
+    background-color: transparent;
+    border: none;
+}
+
+#userIcon{
+    float: right;
+    background-color: transparent;
+    border: none;
 }
 
 /* ヘッダー下部 */
@@ -52,6 +65,13 @@
     float: left;
     width: 50%;
 }
+
+/*時刻表示*/
+#time{
+    position: absolute;
+    top: 165px;
+    right: 145px;
+  }
 
 /* 質問ボタン */
 #question {
@@ -98,18 +118,10 @@ textarea {
     font-size: 15px;
 }
 
-/* タイトルエリアのサイズ */
-#post_title {
-    resize: none;
-    width: 1000px;
-    height: 30px;
-    font-size: 15px;
-}
-
-/* タグエリアのサイズ */
-#post_tag {
-    resize: none;
-    width: 1000px;
-    height: 30px;
-    font-size: 15px;
+#postbtn{
+    height: 50px;
+    width: 50px;
+    margin-left:90%;
+    border:none;
+    background-color: #68B7F0;
 }
