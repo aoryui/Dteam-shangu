@@ -1,4 +1,8 @@
 const Post_Text = document.getElementById('post_text');
+const Post_Title = document.getElementById('post_title');
+const Post_Tag = document.getElementById('post_tag');
+const Result1 = document.getElementById('result1');
+const Result2 = document.getElementById('result2');
 const Result = document.getElementById('result');
 const SubmitButton = document.querySelector('input[type="submit"]');
 const button1 = document.getElementById('timeline');
@@ -21,23 +25,32 @@ button2.addEventListener('click', () => {
 function post(){
 
     // 入力されたテキストを取得
+    const title = Post_Title.value;
+    const tag = Post_Tag.value;
     const text = Post_Text.value;
 
+
     // 改行を `<br>` タグに変換
+    const convertedTitle = title.replace(/\r\n|\r|\n/g, '<br>');
+    const convertedTag = tag.replace(/\r\n|\r|\n/g, '<br>');
     const convertedText = text.replace(/\r\n|\r|\n/g, '<br>');
 
-    const now = new Date();
+    const currentDate = new Date();
     
     // 時間をフォーマット
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1; // 月は0から始まるため、1を加える
+    const day = currentDate.getDate();
+
 
     // 結果表示エリアにテキストを表示
+    Result1.innerHTML = convertedTitle;
+    Result2.innerHTML = convertedTag;
     Result.innerHTML = convertedText;
 
-    const formattedTime = `${hours}:${minutes}:${seconds}`;
-    timeDisplay.textContent = formattedTime;
+
+    //日時標示
+    timeDisplay.textContent = year + '年' + month + '月' + day + '日';
     // フォームとボタンを非表示
     document.getElementById('post-container').style.display = 'none';
 };

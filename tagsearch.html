@@ -6,16 +6,29 @@
         <title>タグ検索画面</title>
         <link rel="stylesheet" type="text/css" href="./css/tagsearch.css">
     </head>
-    <body>
-        <header>
-            <button id="button3">投稿</button>  
-            <button id="button2">質問</button>
-            <h1>タグ検索画面</h1>
-            <!-- 検索バー -->
+    <body class="body">
+        <!-- ヘッダー -->
+        <!-- ヘッダー上部 -->
+        <div class="header1">
+            <!-- ハンバーガーメニューボタン -->
+            <button id="menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+            </button>
             <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
-        </header> 
+        </div>
+        <!-- ヘッダー下部 -->
+        <div class="header2">
+            <div class="left-item">
+            <button class="timelinebtn" id="timeline">タイムライン</button>
+            </div>
+            <div class="right-item">
+            <button class="questionbtn" id="question">質問</button>
+            </div>
+        </div> 
         
-        <li id="Tag"></li>
+        <h3 id="Tag"></h3>
         <!-- <div id="contents">
             <a>20XX/XX/XX 00:00:00</a>
             <h2>タイトル</h2>

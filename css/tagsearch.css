@@ -1,23 +1,87 @@
 /* タグ検索画面のCSS */
 
-/* ボタンコンテナのスタイリング */
-.button-container {
-    text-align: center;
-    margin: 50px auto;
-}
-
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
+/* ヘッダー上部 */
+.header1 {
+    background-color: #68B7F0;
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
 }
 
-button:hover {
-    background-color: #45a049;
+#menu {
+    float: left;
+    ;
+}
+
+/* 検索ボックス */
+#searchInput {
+    float: right;
+    font-size: 25px;
+}
+
+/* ヘッダー下部 */
+.header2 {
+    width: 100%;
+    height: 60px;
+    background-color: #68B7F0;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* タイムラインボタン */
+#timeline {
+    border: none;
+    font-size: 30px;
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: #68B7F0;
+    transition: .3s;
+}
+
+#timeline:hover {
+    background: #86c7f5;
+}
+
+.left-item {
+    float: left;
+    width: 50%;
+}
+
+/* 質問ボタン */
+#question {
+    border: none;
+    font-size: 30px;
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: #68B7F0;
+    transition: .3s;
+}
+
+#question:hover {
+    background: #86c7f5;
+}
+
+.right-item {
+    float: left;
+    width: 50%;
+}
+
+/* ボディ */
+
+.body {
+    padding: 0%;
+    margin: 0%;
+}
+
+h3{
+    text-align: center;
 }
 
 #contents{
@@ -45,6 +109,9 @@ li {
 }
 li:before {
 	content: "#";	
+}
+li:hover { 
+    cursor: pointer;
 }
 
 /* 日付 */
