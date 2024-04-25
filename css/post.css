@@ -23,6 +23,18 @@
     font-size: 25px;
 }
 
+#notice{
+    float: right;
+    background-color: transparent;
+    border: none;
+}
+
+#userIcon{
+    float: right;
+    background-color: transparent;
+    border: none;
+}
+
 /* ヘッダー下部 */
 .header2 {
     width: 100%;
@@ -53,6 +65,13 @@
     float: left;
     width: 50%;
 }
+
+/*時刻表示*/
+#time{
+    position: absolute;
+    top: 165px;
+    right: 145px;
+  }
 
 /* 質問ボタン */
 #question {
@@ -97,4 +116,12 @@ textarea {
     width: 1000px;
     height: 500px;
     font-size: 15px;
+}
+
+#postbtn{
+    height: 50px;
+    width: 50px;
+    margin-left:90%;
+    border:none;
+    background-color: #68B7F0;
 }

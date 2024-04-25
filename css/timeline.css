@@ -1,4 +1,6 @@
 /* 投稿画面のCSS */
+/* aaaaaaaaaaa */
+/* "git.mergeEditor": True */
 
 /* ボタンコンテナのスタイリング */
 .button-container {
@@ -6,21 +8,7 @@
     margin: 50px auto;
 }
 
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-#contents{
+#contents {
     width: 1000px;
     margin: 30px auto;
     padding: 20px;
@@ -29,22 +17,24 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1{
+h1 {
     margin: 10px 10px 20px 10px;
 }
+
 /* タグ */
 li {
-	display: inline-block;
-	margin: 0 .5em .6em 0;
-	padding: .5em;
-	line-height: .5;
-	text-decoration: none;
-	color: #000000;
-	background-color: #EDEEEE;
-	border-radius: 2em;
+    display: inline-block;
+    margin: 0 .5em .6em 0;
+    padding: .5em;
+    line-height: .5;
+    text-decoration: none;
+    color: #000000;
+    background-color: #EDEEEE;
+    border-radius: 2em;
 }
+
 li:before {
-	content: "#";	
+    content: "#";
 }
 
 /* 日付 */
@@ -52,7 +42,7 @@ li:before {
     float: right;
 }
 
-#reply{
+#reply {
     width: 1000px;
     margin: 30px auto;
     padding: 20px;
@@ -64,8 +54,8 @@ li:before {
 /* テキストエリアのサイズ */
 textarea {
     resize: none;
-    width:200px;
-    height:50px;
+    width: 200px;
+    height: 50px;
     font-size: 15px;
 }
 
@@ -74,9 +64,9 @@ textarea {
     position: relative;
     font-size: 1rem;
     line-height: 1.8;
-  }
-  
-  .FlexTextarea__dummy {
+}
+
+.FlexTextarea__dummy {
     overflow: hidden;
     visibility: hidden;
     box-sizing: border-box;
@@ -86,9 +76,9 @@ textarea {
     word-wrap: break-word;
     overflow-wrap: break-word;
     border: 1px solid;
-  }
-  
-  .FlexTextarea__textarea {
+}
+
+.FlexTextarea__textarea {
     position: absolute;
     top: 0;
     left: 0;
@@ -105,7 +95,7 @@ textarea {
     font: inherit;
     letter-spacing: inherit;
     resize: none;
-  }
+}
 
 /* ユーザーアイコン */
 .user {
@@ -118,6 +108,7 @@ textarea {
     font-size: 30px;
     overflow: hidden;
 }
+
 .user::before,
 .user::after {
     position: absolute;
@@ -127,13 +118,16 @@ textarea {
     background-color: #3388dd;
     content: "";
 }
+
 .user::before {
     top: 0.15em;
     width: 0.4em;
     height: 0.4em;
 }
+
 .user::after {
     bottom: -0.4em;
     width: 0.8em;
     height: 0.8em;
+    /* handa test test2*/
 }
