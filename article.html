@@ -7,30 +7,43 @@
     <link rel="stylesheet" type="text/css" href="./css/article.css">
   </head>
 
-  <body>
-    <header>
-      <button id="button1">タイムライン</button>  
-      <button id="button2">質問</button>
-      <a>記事内検索</a>
-      <!-- 検索バー -->
-      <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
-    </header> 
+  <body class="body">
+    <!-- ヘッダー -->
+    <!-- ヘッダー上部 -->
+    <div class="header1">
+      <!-- ハンバーガーメニューボタン -->
+      <button id="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+          <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+        </svg>
+      </button>
+      <input type="text" id="searchInput" placeholder="タグ検索">
+    </div>
+    <!-- ヘッダー下部 -->
+    <div class="header2">
+      <div class="left-item">
+        <button class="timelinebtn" id="timeline">タイムライン</button>
+      </div>
+      <div class="right-item">
+        <button class="questionbtn" id="question">質問</button>
+      </div>
+    </div> 
 
     <div id="contents">
         <span class="user"></span>
         <b>ジンクス</b>
         <a>20XX/XX/XX 00:00:00</a>
         <h1>ここにタイトル</h1>
-        <li id="Python">Python</li>
-        <li id="Docker">Docker</li>
-        <li id="AWS">AWS</li>
-        <li id="poem">ポエム</li>
+        <li>Python</li>
+        <li>Docker</li>
+        <li>AWS</li>
+        <li>ポエム</li>
         <p>この文章は、</p>
         <p>とても役に立つ文章であります。</p>
         <p>なんと素晴らしい文章なことでしょう。</p>
     </div>
 
-    <div id="reply">
+    <div id="reply-form">
       <span class="user"></span>
       <form id="reply-container">
         <div class="FlexTextarea">
@@ -38,9 +51,10 @@
           <textarea id="post_text" class="FlexTextarea__textarea" placeholder="コメントを入力…"></textarea>
         </div>
         <input type="button" onclick="reply()" value="送信">
-      </form>
-      <div id="result"></div>
+      </form>  
     </div>
+    <reply></reply>
+    <div id="reply"></div>
     <footer>
       <p>&copy; team D</p>
     </footer>
