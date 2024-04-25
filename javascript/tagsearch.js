@@ -48,8 +48,6 @@ var PythonText = {
   2:"Pythonはわかりやすい",
   3:"Pythonはおいしい",
   4:"Pythonのここがすごい",
-  tag1_1:"Python",
-  
 };
 
 var DockerText = {
@@ -85,6 +83,7 @@ if (tagname[data]) {
 const numberOfKeys = Object.keys(poemText).length;
 
 for (let i = 1; i <= numberOfKeys; i++) {
+  console.log(i)
   const divElement = document.createElement('div'); // div要素を作成
   divElement.id = 'contents';
   // div要素をbody要素の子要素として追加
@@ -98,7 +97,7 @@ for (let i = 1; i <= numberOfKeys; i++) {
 
   // タイトル表示
   const h1Element = document.createElement('h2'); // h2要素を作成
-  h1Element.textContent = poemText[i];
+  h1Element.textContent = PostText[i];
   // h1要素をdiv要素の子要素として追加
   divElement.appendChild(h1Element);
   
