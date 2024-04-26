@@ -23,6 +23,18 @@
     font-size: 25px;
 }
 
+#notice{
+    float: right;
+    background-color: transparent;
+    border: none;
+}
+
+#userIcon{
+    float: right;
+    background-color: transparent;
+    border: none;
+}
+
 /* ヘッダー下部 */
 .header2 {
     width: 100%;
