@@ -1,14 +1,15 @@
 <!-- 記事のHTML -->
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>記事</title>
-    <link rel="stylesheet" type="text/css" href="./css/article.css">
-  </head>
 
-  <body class="body">
-       <!-- ヘッダー -->
+<head>
+  <meta charset="UTF-8">
+  <title>記事</title>
+  <link rel="stylesheet" type="text/css" href="./css/article.css">
+</head>
+
+<body class="body">
+  <!-- ヘッダー -->
   <!-- ヘッダー上部 -->
   <div class="header1">
     <!-- ハンバーガーメニューボタン -->
@@ -45,38 +46,39 @@
       <button class="questionbtn" id="question">質問</button>
     </div>
   </div>
-  
-    <div id="contents">
-        <span class="user"></span>
-        <b>ジンクス</b>
-        <a>20XX/XX/XX 00:00:00</a>
-        <h1>ここにタイトル</h1>
-        <li>Python</li>
-        <li>Docker</li>
-        <li>AWS</li>
-        <li>ポエム</li>
-        <p>この文章は、</p>
-        <p>とても役に立つ文章であります。</p>
-        <p>なんと素晴らしい文章なことでしょう。</p>
-    </div>
 
-    <div id="reply-form">
-      <span class="user"></span>
-      <form id="reply-container">
-        <div class="FlexTextarea">
-          <div class="FlexTextarea__dummy" aria-hidden="true"></div>
-          <textarea id="post_text" class="FlexTextarea__textarea" placeholder="コメントを入力…"></textarea>
-        </div>
-        <input type="button" onclick="reply()" value="送信">
-      </form>  
-    </div>
-    <reply></reply>
-    <div id="reply"></div>
-    <footer>
-      <p>&copy; team D</p>
-    </footer>
+  <div id="contents">
+    <span class="user"></span>
+    <b>ジンクス</b>
+    <a>20XX/XX/XX 00:00:00</a>
+    <h1>ここにタイトル</h1>
+    <li>Python</li>
+    <li>Docker</li>
+    <li>AWS</li>
+    <li>ポエム</li>
+    <p>この文章は、</p>
+    <p>とても役に立つ文章であります。</p>
+    <p>なんと素晴らしい文章なことでしょう。</p>
+  </div>
 
-    <!-- JavaScriptファイルを読み込む -->
-    <script src="./javascript/article.js"></script>
-  </body>
+  <div id="reply-form">
+    <span class="user"></span>
+    <form id="reply-container">
+      <div class="FlexTextarea">
+        <div class="FlexTextarea__dummy" aria-hidden="true"></div>
+        <textarea id="post_text" class="FlexTextarea__textarea" placeholder="コメントを入力…"></textarea>
+      </div>
+      <input type="button" onclick="reply()" value="送信">
+    </form>
+  </div>
+  <reply></reply>
+  <div id="reply"></div>
+  <footer>
+    <p>&copy; team D</p>
+  </footer>
+
+  <!-- JavaScriptファイルを読み込む -->
+  <script src="./javascript/article.js"></script>
+</body>
+
 </html>
