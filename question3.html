@@ -40,18 +40,22 @@
 
     <div id="contents">
         <form id="post-container">
-            <textarea rows="10" cols="50" id="post_text" placeholder="回答を入力してください"></textarea><br>
-            <input type="button" onclick="post()" value="回答する">
+            <textarea rows="10" cols="50" id="questionInput" placeholder="回答を入力してください"></textarea><br>
+            <input type="button" id="displayButton" onclick="post()" value="回答する">
         </form>
         <div id="result"></div>
     </div>
 
 
     <!-- ボタン -->
-    <button onclick="getAnswer()">回答を表示</button>
+    <!--<button onclick="getAnswer()">回答を表示</button> -->
 
     <!-- 回答表示用の要素 -->
+    <div id="contents">
+    <form id="post-container">
     <div id="answerDisplay"></div>
+    <div id="time"></div>
+    </form>
     </div>
 
 
