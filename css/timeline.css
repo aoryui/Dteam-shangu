@@ -96,6 +96,41 @@
     width: 50%;
 }
 
+/* コンテンツ */
+.Allcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.left-contents {
+    float:left;
+    width: 15%;
+}
+
+.center-contents {
+    float:left;
+    width: 70%;
+}
+
+.right-contents {
+    float:left;
+    width: 15%;
+}
+
+.container{
+    width: 100%;
+}
+
+#test{
+    float:left;
+}
+
 /* ボタンコンテナのスタイリング */
 .button-container {
     text-align: center;
@@ -110,11 +145,6 @@
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-h1 {
-    margin: 10px 10px 20px 10px;
-}
-
 
 /* タグ */
 li {
@@ -148,6 +178,7 @@ li:before {
 
 /*タイムライン内のフォント指定*/
 h2{
+    float:left;
     margin:  0px 0px 0px 0px;
     font-size: 20px;
 }
