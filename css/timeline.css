@@ -14,6 +14,10 @@
     margin: 0px;
     padding: 0px;
 }
+.body {
+    padding: 0%;
+    margin: 0%;
+}
 
 #menu {
     float: left;
@@ -49,6 +53,8 @@
     margin: 0px;
     padding: 0px;
 }
+
+
 
 /* タイムラインボタン */
 #timeline {
