@@ -146,7 +146,11 @@ li:before {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
+/*タイムライン内のフォント指定*/
+h2{
+    margin:  0px 0px 0px 0px;
+    font-size: 20px;
+}
 
 /* ユーザーアイコン */
 /* .user {
