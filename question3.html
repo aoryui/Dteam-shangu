@@ -6,25 +6,26 @@
     <link rel="stylesheet" type="text/css" href="./css/question.css">
 </head>
 
-<body>
+<body class="body">
     <!-- ヘッダー -->
     <!-- ヘッダー上部 -->
     <div class="header1">
         <!-- ハンバーガーメニューボタン -->
         <button id="menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="rgba(255,255,255,1)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
+                fill="rgba(255,255,255,1)">
                 <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
             </svg>
         </button>
-        <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
+        <input type="text" id="searchInput" placeholder="タグ検索">
     </div>
     <!-- ヘッダー下部 -->
     <div class="header2">
         <div class="left-item">
-        <button class="questionbtn" id="timeline">タイムライン</button>
+            <button class="questionbtn" id="timeline">タイムライン</button>
         </div>
         <div class="right-item">
-        <button class="questionbtn" id="question">質問</button>
+            <button class="questionbtn" id="question">質問</button>
         </div>
     </div>
 

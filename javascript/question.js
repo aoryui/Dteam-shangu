@@ -25,6 +25,20 @@ button2.addEventListener('click', () => {
     window.location.href = 'question.html';
 });
 
+//ヘッダーのタグ検索機能
+const inputElement = document.getElementById('searchInput');
+inputElement.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const inputValue = event.target.value.trim(); // 空白削除
+    if (inputValue) { // 入力値が空でない場合のみ処理を実行
+      console.log(inputValue);
+      window.location.href = 'tagsearch.html?tag=' + inputValue;
+    } else {
+      // 何も入力されていない場合の処理
+      alert('タグ名を入力してください');
+    }
+  }
+});
 
 function getAnswer() {
     // 質問入力欄から質問を取得
