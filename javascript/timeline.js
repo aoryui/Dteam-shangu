@@ -1,9 +1,9 @@
-const button1 = document.getElementById('button1');
-const button2 = document.getElementById('button2');
+const button1 = document.getElementById('timeline');
+const button2 = document.getElementById('question');
 
-button3.addEventListener('click', () => {
+button1.addEventListener('click', () => {
     // 投稿に遷移
-    window.location.href = 'post.html';
+    window.location.href = 'timeline.html';
 });
 
 button2.addEventListener('click', () => {
