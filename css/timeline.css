@@ -131,7 +131,8 @@
 /* 投稿ボタン */
 #postbtn{
     position: fixed;
-    margin-right: 5%;
+    background-color: #86c7f5;
+    border:none;
 }
 
 
