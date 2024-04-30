@@ -64,6 +64,14 @@ var PythonText = {
   3:"Pythonはおいしい",
   4:"Pythonのここがすごい",
 };
+var PythonTag1 = {1:"Python", 2:"AWS", 3:"機械学習", 4:"データサイエンス"}
+var PythonTag2 = {1:"Python", 2:"RaspberryPi", 3:"電子工作"}
+var PythonTag3 = {1:"Python", 2:"Ubuntu"}
+var PythonTag4 = {1:"Python", 2:"Django", 3:"React", 4:"個人製作"}
+var PythonTime1 = {1:"2024", 2:"04", 3:"30"}
+var PythonTime2 = {1:"2024", 2:"04", 3:"26"}
+var PythonTime3 = {1:"2024", 2:"04", 3:"07"}
+var PythonTime4 = {1:"2024", 2:"03", 3:"28"}
 
 var DockerText = {
   1:"Dockerのすゝめ",
@@ -71,6 +79,14 @@ var DockerText = {
   3:"Dockerのバージョン管理",
   4:"Dockerすごいね"
 };
+var DockerTag1 = {1:"Docker", 2:"MySQL", 3:"Next.js"}
+var DockerTag2 = {1:"Docker", 2:"AWS"}
+var DockerTag3 = {1:"Docker", 2:"Python"}
+var DockerTag4 = {1:"Docker", 2:"ポエム", 3:"初心者"}
+var DockerTime1 = {1:"2024", 2:"04", 3:"30"}
+var DockerTime2 = {1:"2024", 2:"04", 3:"26"}
+var DockerTime3 = {1:"2024", 2:"04", 3:"07"}
+var DockerTime4 = {1:"2024", 2:"03", 3:"28"}
 
 var AWSText = {
   1:"AWSの始め方",
@@ -78,6 +94,14 @@ var AWSText = {
   3:"AWSはおいしい",
   4:"AWSすごい"
 };
+var AWSTag1 = {1:"AWS", 2:"MySQL", 3:"Next.js"}
+var AWSTag2 = {1:"AWS", 2:"Docker"}
+var AWSTag3 = {1:"AWS", 2:"bedrock", 3:"claude"}
+var AWSTag4 = {1:"AWS", 2:"CloudFront", 3:"S3"}
+var AWSTime1 = {1:"2024", 2:"04", 3:"30"}
+var AWSTime2 = {1:"2024", 2:"04", 3:"26"}
+var AWSTime3 = {1:"2024", 2:"04", 3:"07"}
+var AWSTime4 = {1:"2024", 2:"03", 3:"28"}
   
 var poemText = {
   1:"スクラムとウォータフォール",
@@ -85,6 +109,14 @@ var poemText = {
   3:"おいしいVSCodeのつくりかた",
   4:"GitHubで快適な開発環境を構築する"
 };
+var poemTag1 = {1:"ポエム", 2:"初心者"}
+var poemTag2 = {1:"ポエム", 2:"Python"}
+var poemTag3 = {1:"ポエム", 2:"AWS"}
+var poemTag4 = {1:"ポエム", 2:"DBMS", 3:"GCP"}
+var poemTime1 = {1:"2024", 2:"04", 3:"30"}
+var poemTime2 = {1:"2024", 2:"04", 3:"26"}
+var poemTime3 = {1:"2024", 2:"04", 3:"07"}
+var poemTime4 = {1:"2024", 2:"03", 3:"28"}
 
 // 選択したタグに応じてarrayを変える
 let PostText;
@@ -106,7 +138,12 @@ for (let i = 1; i <= numberOfKeys; i++) {
 
   // 日付表示
   const aElement = document.createElement('a'); // a要素を作成
-  aElement.textContent = "20XX/XX/XX 00:00:00";
+  timedata = eval(data + "Time" + i);
+  const year = timedata[1];
+  const month = timedata[2];
+  const day = timedata[3];
+  let timetext = year + "/" + month + "/" + day
+  aElement.textContent = timetext;
   // a要素をdiv要素の子要素として追加
   divElement.appendChild(aElement);
 
@@ -117,10 +154,13 @@ for (let i = 1; i <= numberOfKeys; i++) {
   divElement.appendChild(h1Element);
   
   // タグ表示
-  const liElement = document.createElement('li'); // li要素を作成
-  liElement.textContent = tagname[data];
-  // li要素をdiv要素の子要素として追加
-  divElement.appendChild(liElement);
+  let dictionary = eval(data + "Tag" + i)
+  for (const key in dictionary) {
+    const liElement = document.createElement('li'); // li要素を作成
+    liElement.textContent = dictionary[key];
+    // li要素をdiv要素の子要素として追加
+    divElement.appendChild(liElement);
+  }
 }
 
 // タグをクリックしたらtagsearch.htmlへ遷移
@@ -128,6 +168,32 @@ const liTags = document.querySelectorAll('li'); // liタグを取得
 for (const liTag of liTags) {
   liTag.addEventListener('click', function() {
     const text = this.textContent;
-    window.location.href = 'tagsearch.html?data=' + text; // URLを組み立てる
+    window.location.href = 'tagsearch.html?tag=' + text; // URLを組み立てる
+  });
+}
+
+const h2Tags = document.querySelectorAll('h2');
+
+for (const h2Tag of h2Tags) {
+  h2Tag.addEventListener('click', function(event) {
+    // クリックされたh2要素
+    const clickedH2 = event.currentTarget;
+
+    // クリックされたh2要素を含むdiv要素
+    const divContainer = clickedH2.closest('div#contents');
+
+    // div要素内の情報取得
+    const h2Text = clickedH2.textContent;
+    const aTag = divContainer.querySelector('a');
+    const time = aTag ? aTag.textContent : '';
+    const listItems = divContainer.querySelectorAll('li');
+    const listText = [];
+    for (const item of listItems) {
+      listText.push(item.textContent);
+    }
+    const arr =listText;
+    const tagtext = arr.join(' ');
+
+    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + "ここに文章を載せる" + '&time=' + time;
   });
 }

@@ -20,13 +20,11 @@ let data = urlParams.get('data');
 let title = urlParams.get('title');
 let tag = urlParams.get('tag');
 let text = urlParams.get('text');
-let year = urlParams.get('year');
-let month = urlParams.get('month');
-let day = urlParams.get('day');
+let time = urlParams.get('time');
 
-if (year != null){ //article.htmlが直接開かれた場合、要素の置き換えをしない
+if (time != null){ //article.htmlが直接開かれた場合、要素の置き換えをしない
   const contentsDiv = document.getElementById('contents');
-  contentsDiv.querySelector('a').textContent = `${year}/${month}/${day}`;
+  contentsDiv.querySelector('a').textContent = time;
   contentsDiv.querySelector('h1').textContent = title;
   const tags = tag.split(' ');
 

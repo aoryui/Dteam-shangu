@@ -54,7 +54,8 @@ function post(){
     var year = dt.getFullYear();
     var month = ("00" + (dt.getMonth()+1)).slice(-2);
     var day = ("00" + (dt.getDate())).slice(-2);
+    var time = `${year}/${month}/${day}`
 
     // articleに入力をもってくよ！
-    window.location.href = 'article.html?title=' + convertedTitle + '&tag=' + convertedTag + '&text=' + convertedText + '&year=' + year + '&month=' + month + '&day=' + day;
+    window.location.href = 'article.html?title=' + convertedTitle + '&tag=' + convertedTag + '&text=' + convertedText + '&time=' + time;
 };
