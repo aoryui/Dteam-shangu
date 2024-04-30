@@ -1,6 +1,6 @@
 const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
-const button3 = document.getElementById('postbtn')
+const button3 = document.getElementById('postbtn');
 
 button1.addEventListener('click', () => {
     // 投稿に遷移
