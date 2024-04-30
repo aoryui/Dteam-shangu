@@ -14,7 +14,7 @@
 #menu {
     float: left;
     background-color: transparent;
-    border:none;
+    border: none;
 }
 
 
@@ -25,13 +25,13 @@
     margin-top: 5px;
 }
 
-#notice{
+#notice {
     float: right;
     background-color: transparent;
     border: none;
 }
 
-#userIcon{
+#userIcon {
     float: right;
     background-color: transparent;
     border: none;
@@ -105,43 +105,43 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin: 0px;
     padding: 0px;
 }
 
 /* 左側コンテンツ */
 .left-contents {
-    float:left;
+    float: left;
     width: 15%;
 }
 
 /* 中央コンテンツ */
 .center-contents {
-    float:left;
+    float: left;
     width: 70%;
 }
 
 /* 右側コンテンツ */
 .right-contents {
-    float:left;
+    float: left;
     width: 15%;
 }
 
 /* 投稿ボタン */
-#postbtn{
+#postbtn {
     position: fixed;
     background-color: #86c7f5;
-    border:none;
+    border: none;
 }
 
 
-.container{
+.container {
     width: 100%;
 }
 
-#test{
-    float:left;
+#test {
+    float: left;
 }
 
 /* ボタンコンテナのスタイリング */
@@ -190,9 +190,8 @@ li:before {
 }
 
 /*タイムライン内のフォント指定*/
-h2{
-    float:left;
-    margin:  0px 0px 0px 0px;
+h2 {
+    margin: 0px 0px 0px 0px;
     font-size: 20px;
 }
 
