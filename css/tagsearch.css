@@ -13,34 +13,28 @@
 
 #menu {
     float: left;
-    background-color: #68B7F0;
-    border: none;
-    margin-left:5px;
-    margin-top: 5px;
+    background-color: transparent;
+    border:none;
 }
+
 
 /* 検索ボックス */
 #searchInput {
     float: right;
     font-size: 25px;
-    margin-right:5px;
-    margin-top: 12px;
+    margin-top: 5px;
 }
 
 #notice{
     float: right;
     background-color: transparent;
     border: none;
-    margin-right:5px;
-    margin-top: 5px;
 }
 
 #userIcon{
     float: right;
     background-color: transparent;
     border: none;
-    margin-right:5px;
-    margin-top: 5px;
 }
 
 /* ヘッダー下部 */
