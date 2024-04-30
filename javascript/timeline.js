@@ -1,5 +1,6 @@
 const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
+const button3 = document.getElementById('postbtn')
 
 button1.addEventListener('click', () => {
     // 投稿に遷移
@@ -9,6 +10,11 @@ button1.addEventListener('click', () => {
 button2.addEventListener('click', () => {
     // 質問に遷移
     window.location.href = 'question.html';
+});
+
+button3.addEventListener('click', () => {
+  // 質問に遷移
+  window.location.href = 'post.html';
 });
 
 //ヘッダーのタグ検索機能
