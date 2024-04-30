@@ -3,16 +3,21 @@
 // ヘッダー
 const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
+const button3 = document.getElementById('postbtn');
 
 button1.addEventListener('click', () => {
     // ページ1に遷移
     window.location.href = 'timeline.html';
 });
 
-
 button2.addEventListener('click', () => {
     // ページ3に遷移
     window.location.href = 'question.html';
+});
+
+button3.addEventListener('click', () => {
+  // 質問に遷移
+  window.location.href = 'post.html';
 });
 
 //ヘッダーのタグ検索機能
@@ -128,13 +133,15 @@ if (tagname[data]) {
 
 // キーの数を取得
 const numberOfKeys = Object.keys(PostText).length;
+// 中央コンテナの位置を取得
+const contentsDiv = document.querySelector('.contents.center-contents');
 
 for (let i = 1; i <= numberOfKeys; i++) {
   console.log(i)
   const divElement = document.createElement('div'); // div要素を作成
   divElement.id = 'contents';
-  // div要素をbody要素の子要素として追加
-  document.body.appendChild(divElement);
+  // div要素を中央コンテナの子要素として追加
+  contentsDiv.appendChild(divElement);
 
   // 日付表示
   const aElement = document.createElement('a'); // a要素を作成

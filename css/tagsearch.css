@@ -94,13 +94,55 @@
     padding: 0%;
     margin: 0%;
 }
+/* 全体コンテンツ */
+.Allcontainer {
+    display: flex;
+}
+.contents{
+    flex: 1;
+}
+/* 左側コンテンツ */
+.left-contents {
+    float: left;
+}
+
+/* 中央コンテンツ */
+.center-contents {
+    float: left;
+}
+
+/* 右側コンテンツ */
+.right-contents {
+    float: left;
+}
+
+/* 投稿ボタン */
+#postbtn {
+    position: fixed;
+    background-color: #86c7f5;
+    border: none;
+}
+#postbtn:hover { 
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+}
+
+/* ボタンコンテナのスタイリング */
+.button-container {
+    text-align: center;
+    margin: 50px auto;
+}
 
 h3{
     text-align: center;
 }
 
 #contents{
-    width: 1000px;
+    width: 800px;
     margin: 20px auto;
     padding: 15px;
     border: 1px solid #ccc;
