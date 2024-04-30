@@ -17,10 +17,12 @@
     border:none;
 }
 
+
 /* 検索ボックス */
 #searchInput {
     float: right;
     font-size: 25px;
+    margin-top: 5px;
 }
 
 #notice{

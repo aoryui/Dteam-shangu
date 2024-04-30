@@ -11,11 +11,6 @@
     padding: 0px;
 }
 
-.body {
-    padding: 0%;
-    margin: 0%;
-}
-
 #menu {
     float: left;
     background-color: transparent;
@@ -27,6 +22,7 @@
 #searchInput {
     float: right;
     font-size: 25px;
+    margin-top: 5px;
 }
 
 #notice{
@@ -96,7 +92,13 @@
     width: 50%;
 }
 
-/* コンテンツ */
+/* ボディ */
+.body {
+    padding: 0%;
+    margin: 0%;
+}
+
+/* 全体コンテンツ */
 .Allcontainer {
     display: flex;
     justify-content: space-between;
@@ -108,20 +110,30 @@
     padding: 0px;
 }
 
+/* 左側コンテンツ */
 .left-contents {
     float:left;
     width: 15%;
 }
 
+/* 中央コンテンツ */
 .center-contents {
     float:left;
     width: 70%;
 }
 
+/* 右側コンテンツ */
 .right-contents {
     float:left;
     width: 15%;
 }
+
+/* 投稿ボタン */
+#postbtn{
+    position: fixed;
+    margin-right: 5%;
+}
+
 
 .container{
     width: 100%;
