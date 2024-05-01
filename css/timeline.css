@@ -123,8 +123,17 @@
 /* 投稿ボタン */
 #postbtn {
     position: fixed;
+    right:50px;
+    bottom:50px;
+    height:75px;
+    width:75px;
     background-color: #86c7f5;
     border: none;
+}
+
+#postbtn:hover { 
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 
@@ -135,6 +144,8 @@
 #test {
     float: left;
 }
+
+
 
 /* ボタンコンテナのスタイリング */
 .button-container {
