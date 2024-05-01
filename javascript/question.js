@@ -6,6 +6,7 @@ const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
 const Result = document.getElementById('result');
 const Post_text = document.getElementById('post_text');
+const button3 = document.getElementById('postbtn');
 
 
 button1.addEventListener('click', () => {
@@ -17,6 +18,12 @@ button2.addEventListener('click', () => {
     // 質問に遷移
     window.location.href = 'question.html';
 });
+
+button3.addEventListener('click', () => {
+  // 質問に遷移
+  window.location.href = 'post.html';
+});
+
 
 //ヘッダーのタグ検索機能
 const inputElement = document.getElementById('searchInput');
