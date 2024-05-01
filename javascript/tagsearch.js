@@ -45,6 +45,9 @@ switch (data){
   case 'ポエム':
     data = 'poem';
     break;
+  case '初心者':
+    data = 'beginner';
+    break;
   default:
     break;
 }
@@ -53,7 +56,7 @@ switch (data){
 Tag.textContent = data;
 
 // タグの表示テキスト
-var tagname = {Python:"Python", Docker:"Docker", AWS:"AWS", poem:"ポエム"};
+var tagname = {AWS:"AWS", beginner:"初心者", Docker:"Docker", JavaScript:"JavaScript", PHP:"PHP", poem:"ポエム", Python:"Python"};
 
 // URLパラメータから取得したデータからtagnameを表示
 if (tagname[data]) {
@@ -63,20 +66,35 @@ if (tagname[data]) {
 }
 
 // タグに応じて記事のテキストを変える
-var PythonText = {
-  1:"Pythonは楽しい",
-  2:"Pythonはわかりやすい",
-  3:"Pythonはおいしい",
-  4:"Pythonのここがすごい",
+var AWSText = {
+  1:"AWSの始め方",
+  2:"AWSでデータサイエンス",
+  3:"AWSはおいしい",
+  4:"AWSすごい"
 };
-var PythonTag1 = {1:"Python", 2:"AWS", 3:"機械学習", 4:"データサイエンス"}
-var PythonTag2 = {1:"Python", 2:"RaspberryPi", 3:"電子工作"}
-var PythonTag3 = {1:"Python", 2:"Ubuntu"}
-var PythonTag4 = {1:"Python", 2:"Django", 3:"React", 4:"個人製作"}
-var PythonTime1 = {1:"2024", 2:"04", 3:"30"}
-var PythonTime2 = {1:"2024", 2:"04", 3:"26"}
-var PythonTime3 = {1:"2024", 2:"04", 3:"07"}
-var PythonTime4 = {1:"2024", 2:"03", 3:"28"}
+var AWSTag1 = {1:"AWS", 2:"MySQL", 3:"Next.js"}
+var AWSTag2 = {1:"AWS", 2:"Docker"}
+var AWSTag3 = {1:"AWS", 2:"bedrock", 3:"claude"}
+var AWSTag4 = {1:"AWS", 2:"CloudFront", 3:"S3"}
+var AWSTime1 = {1:"2024", 2:"04", 3:"30"}
+var AWSTime2 = {1:"2024", 2:"04", 3:"26"}
+var AWSTime3 = {1:"2024", 2:"04", 3:"07"}
+var AWSTime4 = {1:"2024", 2:"03", 3:"28"}
+
+var beginnerText = {
+  1:"命名規則を決めちゃおう",
+  2:"プログラマー必見の神サイト",
+  3:"リモートワークの罠",
+  4:"MarkDownチートシート"
+};
+var beginnerTag1 = {1:"初心者", 2:"プログラミング",}
+var beginnerTag2 = {1:"初心者", 2:"独学", 3:"プログラミング"}
+var beginnerTag3 = {1:"初心者", 2:"転職"}
+var beginnerTag4 = {1:"初心者", 2:"MarkDown"}
+var beginnerTime1 = {1:"2024", 2:"04", 3:"10"}
+var beginnerTime2 = {1:"2024", 2:"03", 3:"29"}
+var beginnerTime3 = {1:"2024", 2:"02", 3:"18"}
+var beginnerTime4 = {1:"2024", 2:"01", 3:"28"}
 
 var DockerText = {
   1:"Dockerのすゝめ",
@@ -93,21 +111,36 @@ var DockerTime2 = {1:"2024", 2:"04", 3:"26"}
 var DockerTime3 = {1:"2024", 2:"04", 3:"07"}
 var DockerTime4 = {1:"2024", 2:"03", 3:"28"}
 
-var AWSText = {
-  1:"AWSの始め方",
-  2:"AWSでデータサイエンス",
-  3:"AWSはおいしい",
-  4:"AWSすごい"
+var JavaScriptText = {
+  1:"【JavaScript】JavaScriptとは",
+  2:"JavaScriptについて少し整理してみた",
+  3:"JavaScript 変数宣言について",
+  4:"JavaScript vs TypeScript"
 };
-var AWSTag1 = {1:"AWS", 2:"MySQL", 3:"Next.js"}
-var AWSTag2 = {1:"AWS", 2:"Docker"}
-var AWSTag3 = {1:"AWS", 2:"bedrock", 3:"claude"}
-var AWSTag4 = {1:"AWS", 2:"CloudFront", 3:"S3"}
-var AWSTime1 = {1:"2024", 2:"04", 3:"30"}
-var AWSTime2 = {1:"2024", 2:"04", 3:"26"}
-var AWSTime3 = {1:"2024", 2:"04", 3:"07"}
-var AWSTime4 = {1:"2024", 2:"03", 3:"28"}
-  
+var JavaScriptTag1 = {1:"JavaScript", 2:"Web開発", 3:"初心者"}
+var JavaScriptTag2 = {1:"JavaScript", 2:"初心者"}
+var JavaScriptTag3 = {1:"JavaScript", 2:"変数宣言", 3:"初心者"}
+var JavaScriptTag4 = {1:"JavaScript", 2:"TypeScript"}
+var JavaScriptTime1 = {1:"2024", 2:"04", 3:"30"}
+var JavaScriptTime2 = {1:"2024", 2:"04", 3:"26"}
+var JavaScriptTime3 = {1:"2024", 2:"04", 3:"07"}
+var JavaScriptTime4 = {1:"2024", 2:"03", 3:"28"}
+
+var PHPText = {
+  1:"PHPのすすめ(応用編)",
+  2:"PHPのすすめ(基本編2)",
+  3:"PHPのすすめ(基本編1)",
+  4:"PHPのすすめ(環境構築)"
+};
+var PHPTag1 = {1:"PHP", 2:"初心者", 3:"AWS", 4:"MySQL"}
+var PHPTag2 = {1:"PHP", 2:"初心者", 3:"XAMPP", 4:"MySQL"}
+var PHPTag3 = {1:"PHP", 2:"初心者", 3:"XAMPP"}
+var PHPTag4 = {1:"PHP", 2:"初心者", 3:"XAMPP"}
+var PHPTime1 = {1:"2024", 2:"04", 3:"10"}
+var PHPTime2 = {1:"2024", 2:"03", 3:"29"}
+var PHPTime3 = {1:"2024", 2:"02", 3:"18"}
+var PHPTime4 = {1:"2024", 2:"01", 3:"28"}
+
 var poemText = {
   1:"スクラムとウォータフォール",
   2:"著作権について学ぼう",
@@ -122,6 +155,21 @@ var poemTime1 = {1:"2024", 2:"04", 3:"30"}
 var poemTime2 = {1:"2024", 2:"04", 3:"26"}
 var poemTime3 = {1:"2024", 2:"04", 3:"07"}
 var poemTime4 = {1:"2024", 2:"03", 3:"28"}
+
+var PythonText = {
+  1:"Pythonは楽しい",
+  2:"Pythonはわかりやすい",
+  3:"Pythonはおいしい",
+  4:"Pythonのここがすごい",
+};
+var PythonTag1 = {1:"Python", 2:"AWS", 3:"機械学習", 4:"データサイエンス"}
+var PythonTag2 = {1:"Python", 2:"RaspberryPi", 3:"電子工作"}
+var PythonTag3 = {1:"Python", 2:"Ubuntu"}
+var PythonTag4 = {1:"Python", 2:"Django", 3:"React", 4:"個人製作"}
+var PythonTime1 = {1:"2024", 2:"04", 3:"30"}
+var PythonTime2 = {1:"2024", 2:"04", 3:"26"}
+var PythonTime3 = {1:"2024", 2:"04", 3:"07"}
+var PythonTime4 = {1:"2024", 2:"03", 3:"28"}
 
 // 選択したタグに応じてarrayを変える
 let PostText;

@@ -62,4 +62,48 @@ function addEvent() {
 }
 
 // find関数を使った検索フォーム
+const select = document.getElementById('lang');
+  const submitButton = document.getElementById('sort');
+  submitButton.addEventListener('click', function(event) {
+    event.preventDefault(); // デフォルトの送信動作をキャンセル
+    const selectedOption = select.options[select.selectedIndex];
+    const selectedValue = selectedOption.value;
+    const url = 'tagsearch.html?tag=' + selectedValue;
+    window.location.href = url;
+});
 
+// タグをクリックしたらtagsearch.htmlへ遷移
+const liTags = document.querySelectorAll('li'); // liタグを取得
+for (const liTag of liTags) {
+  liTag.addEventListener('click', function() {
+    const text = this.textContent;
+    window.location.href = 'tagsearch.html?tag=' + text; // URLを組み立てる
+  });
+}
+
+// 記事画面に遷移
+const h2Tags = document.querySelectorAll('h2');
+
+for (const h2Tag of h2Tags) {
+  h2Tag.addEventListener('click', function(event) {
+    // クリックされたh2要素
+    const clickedH2 = event.currentTarget;
+
+    // クリックされたh2要素を含むdiv要素
+    const divContainer = clickedH2.closest('div#contents');
+
+    // div要素内の情報取得
+    const h2Text = clickedH2.textContent;
+    const aTag = divContainer.querySelector('a');
+    const time = aTag ? aTag.textContent : '';
+    const listItems = divContainer.querySelectorAll('li');
+    const listText = [];
+    for (const item of listItems) {
+      listText.push(item.textContent);
+    }
+    const arr =listText;
+    const tagtext = arr.join(' ');
+
+    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + "ここに文章を載せる" + '&time=' + time;
+  });
+}
