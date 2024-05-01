@@ -105,25 +105,23 @@
 /* 全体コンテンツ */
 .Allcontainer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
 }
-
+.contents{
+    flex: 1;
+}
 /* 左側コンテンツ */
 .left-contents {
-    float:left;
-    width: 15%;
+    float: left;
 }
 
 /* 中央コンテンツ */
 .center-contents {
-    float:left;
-    width: 70%;
+    float: left;
+}
+
+/* 右側コンテンツ */
+.right-contents {
+    float: left;
 }
 
 #post_title{
@@ -150,6 +148,16 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#post_title{
+    width: 1000px;
+    height: 30px;
+    font-size: 30px;
+}
+#post_tag{
+    width: 1000px;
+    height: 20px;
+    font-size: 20px;
+}
 /* テキストエリアのサイズ */
 textarea {
     resize: none;
@@ -158,10 +166,4 @@ textarea {
     font-size: 15px;
 }
 
-#postbtn{
-    height: 50px;
-    width: 50px;
-    margin-left:90%;
-    border:none;
-    background-color: #68B7F0;
-}
+
