@@ -56,7 +56,7 @@ switch (data){
 Tag.textContent = data;
 
 // タグの表示テキスト
-var tagname = {AWS:"AWS", beginner:"初心者", Docker:"Docker", JavaScript:"JavaScript", PHP:"PHP", poem:"ポエム", Python:"Python"};
+var tagname = {AWS:"AWS", beginner:"初心者", Docker:"Docker", Java:"Java", JavaScript:"JavaScript", PHP:"PHP", poem:"ポエム", Python:"Python"};
 
 // URLパラメータから取得したデータからtagnameを表示
 if (tagname[data]) {
@@ -113,18 +113,33 @@ var DockerTime4 = {1:"2024", 2:"03", 3:"28"}
 
 var JavaScriptText = {
   1:"【JavaScript】JavaScriptとは",
-  2:"JavaScriptについて少し整理してみた",
+  2:"「JavaScript」を「Java」と略すな",
   3:"JavaScript 変数宣言について",
   4:"JavaScript vs TypeScript"
 };
 var JavaScriptTag1 = {1:"JavaScript", 2:"Web開発", 3:"初心者"}
-var JavaScriptTag2 = {1:"JavaScript", 2:"初心者"}
+var JavaScriptTag2 = {1:"JavaScript", 2:"Java",3:"ポエム"}
 var JavaScriptTag3 = {1:"JavaScript", 2:"変数宣言", 3:"初心者"}
 var JavaScriptTag4 = {1:"JavaScript", 2:"TypeScript"}
 var JavaScriptTime1 = {1:"2024", 2:"04", 3:"30"}
 var JavaScriptTime2 = {1:"2024", 2:"04", 3:"26"}
 var JavaScriptTime3 = {1:"2024", 2:"04", 3:"07"}
 var JavaScriptTime4 = {1:"2024", 2:"03", 3:"28"}
+
+var JavaText = {
+  1:"【Java】Javaとは",
+  2:"いいコードの書き方(Java編)",
+  3:"Javaエンジニアへの道",
+  4:"「JavaScript」を「Java」と略すな"
+};
+var JavaTag1 = {1:"Java", 2:"Web開発", 3:"初心者"}
+var JavaTag2 = {1:"Java", 2:"初心者"}
+var JavaTag3 = {1:"Java", 2:"転職", 3:"新卒"}
+var JavaTag4 = {1:"JavaScript", 2:"Java",3:"ポエム"}
+var JavaTime1 = {1:"2024", 2:"04", 3:"30"}
+var JavaTime2 = {1:"2024", 2:"04", 3:"26"}
+var JavaTime3 = {1:"2024", 2:"04", 3:"07"}
+var JavaTime4 = {1:"2024", 2:"03", 3:"28"}
 
 var PHPText = {
   1:"PHPのすすめ(応用編)",
@@ -217,6 +232,17 @@ for (let i = 1; i <= numberOfKeys; i++) {
     divElement.appendChild(liElement);
   }
 }
+
+// 検索フォーム
+const select = document.getElementById('lang');
+  const submitButton = document.getElementById('sort');
+  submitButton.addEventListener('click', function(event) {
+    event.preventDefault(); // デフォルトの送信動作をキャンセル
+    const selectedOption = select.options[select.selectedIndex];
+    const selectedValue = selectedOption.value;
+    const url = 'tagsearch.html?tag=' + selectedValue;
+    window.location.href = url;
+});
 
 // タグをクリックしたらtagsearch.htmlへ遷移
 const liTags = document.querySelectorAll('li'); // liタグを取得
