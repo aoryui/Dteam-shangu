@@ -62,4 +62,12 @@ function addEvent() {
 }
 
 // find関数を使った検索フォーム
-
+const select = document.getElementById('lang');
+  const submitButton = document.getElementById('sort');
+  submitButton.addEventListener('click', function(event) {
+    event.preventDefault(); // デフォルトの送信動作をキャンセル
+    const selectedOption = select.options[select.selectedIndex];
+    const selectedValue = selectedOption.value;
+    const url = 'tagsearch.html?tag=' + selectedValue;
+    window.location.href = url;
+  });
