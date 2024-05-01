@@ -177,6 +177,9 @@ li {
 li:before {
     content: "#";
 }
+li:hover { 
+    cursor: pointer;
+}
 
 /* 日付 */
 #contents a {
@@ -196,6 +199,10 @@ li:before {
 h2 {
     margin: 0px 0px 0px 0px;
     font-size: 20px;
+}
+h2:hover { 
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /*ボタン場所指定*/
