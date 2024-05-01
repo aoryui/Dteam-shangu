@@ -101,6 +101,39 @@
     margin: 0%;
 }
 
+/* 全体コンテンツ */
+.Allcontainer {
+    display: flex;
+}
+.contents{
+    flex: 1;
+}
+/* 左側コンテンツ */
+.left-contents {
+    float: left;
+}
+
+/* 中央コンテンツ */
+.center-contents {
+    float: left;
+}
+
+/* 右側コンテンツ */
+.right-contents {
+    float: left;
+}
+
+/* 投稿ボタン */
+#postbtn {
+    position: fixed;
+    right:50px;
+    bottom:50px;
+    height:75px;
+    width:75px;
+    background-color: #86c7f5;
+    border: none;
+}
+
 #contents{
     width: 1000px;
     margin: 30px auto;
