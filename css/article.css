@@ -15,7 +15,7 @@
     float: left;
     background-color: #68B7F0;
     border: none;
-    margin-left:5px;
+    margin-left: 5px;
     margin-top: 5px;
 }
 
@@ -23,23 +23,23 @@
 #searchInput {
     float: right;
     font-size: 25px;
-    margin-right:5px;
+    margin-right: 5px;
     margin-top: 12px;
 }
 
-#notice{
+#notice {
     float: right;
     background-color: transparent;
     border: none;
-    margin-right:5px;
+    margin-right: 5px;
     margin-top: 5px;
 }
 
-#userIcon{
+#userIcon {
     float: right;
     background-color: transparent;
     border: none;
-    margin-right:5px;
+    margin-right: 5px;
     margin-top: 5px;
 }
 
@@ -101,13 +101,25 @@
     margin: 0%;
 }
 
+/* グッドボタン */
+
+#goodbtn {
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    float: right;
+    margin-top: 50px;
+}
+
 /* 全体コンテンツ */
 .Allcontainer {
     display: flex;
 }
-.contents{
+
+.contents {
     flex: 1;
 }
+
 /* 左側コンテンツ */
 .left-contents {
     float: left;
@@ -126,15 +138,15 @@
 /* 投稿ボタン */
 #postbtn {
     position: fixed;
-    right:50px;
-    bottom:50px;
-    height:75px;
-    width:75px;
+    right: 50px;
+    bottom: 50px;
+    height: 75px;
+    width: 75px;
     background-color: #86c7f5;
     border: none;
 }
 
-#contents{
+#contents {
     width: 1000px;
     margin: 30px auto;
     padding: 20px;
@@ -143,24 +155,27 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1{
+h1 {
     margin: 10px 10px 20px 10px;
 }
+
 /* タグ */
 li {
-	display: inline-block;
-	margin: 0 .5em .6em 0;
-	padding: .5em;
-	line-height: .5;
-	text-decoration: none;
-	color: #000000;
-	background-color: #EDEEEE;
-	border-radius: 2em;
+    display: inline-block;
+    margin: 0 .5em .6em 0;
+    padding: .5em;
+    line-height: .5;
+    text-decoration: none;
+    color: #000000;
+    background-color: #EDEEEE;
+    border-radius: 2em;
 }
+
 li:before {
-	content: "#";	
+    content: "#";
 }
-li:hover { 
+
+li:hover {
     cursor: pointer;
 }
 
@@ -169,7 +184,7 @@ li:hover {
     float: right;
 }
 
-#reply-form{
+#reply-form {
     width: 1000px;
     margin: 30px auto;
     padding: 20px;
@@ -183,9 +198,9 @@ li:hover {
     position: relative;
     font-size: 1rem;
     line-height: 1.8;
-  }
-  
-  .FlexTextarea__dummy {
+}
+
+.FlexTextarea__dummy {
     overflow: hidden;
     visibility: hidden;
     box-sizing: border-box;
@@ -195,9 +210,9 @@ li:hover {
     word-wrap: break-word;
     overflow-wrap: break-word;
     border: 1px solid;
-  }
-  
-  .FlexTextarea__textarea {
+}
+
+.FlexTextarea__textarea {
     position: absolute;
     top: 0;
     left: 0;
@@ -214,7 +229,7 @@ li:hover {
     font: inherit;
     letter-spacing: inherit;
     resize: none;
-  }
+}
 
 /* ユーザーアイコン */
 .user {
@@ -227,6 +242,7 @@ li:hover {
     font-size: 30px;
     overflow: hidden;
 }
+
 .user::before,
 .user::after {
     position: absolute;
@@ -236,18 +252,20 @@ li:hover {
     background-color: #3388dd;
     content: "";
 }
+
 .user::before {
     top: 0.15em;
     width: 0.4em;
     height: 0.4em;
 }
+
 .user::after {
     bottom: -0.4em;
     width: 0.8em;
     height: 0.8em;
 }
 
-#reply{
+#reply {
     width: 1000px;
     margin: 30px auto;
     padding: 20px;
