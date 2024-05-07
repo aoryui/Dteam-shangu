@@ -67,6 +67,12 @@ var AWSTime1 = {1:"2024", 2:"04", 3:"30"}
 var AWSTime2 = {1:"2024", 2:"04", 3:"26"}
 var AWSTime3 = {1:"2024", 2:"04", 3:"07"}
 var AWSTime4 = {1:"2024", 2:"03", 3:"28"}
+var AWSArticle = {
+  1:"AWSテキスト",
+  2:"AWSあああ",
+  3:"AWSかかか",
+  4:"AWSおいえｗｊろいえｗ"
+};
 
 var beginnerText = {
   1:"命名規則を決めちゃおう",
@@ -187,7 +193,6 @@ const numberOfKeys = Object.keys(PostText).length;
 const contentsDiv = document.querySelector('.contents.center-contents');
 
 for (let i = 1; i <= numberOfKeys; i++) {
-  console.log(i)
   const divElement = document.createElement('div'); // div要素を作成
   divElement.id = 'contents';
   // div要素を中央コンテナの子要素として追加
@@ -262,6 +267,16 @@ for (const h2Tag of h2Tags) {
     const arr =listText;
     const tagtext = arr.join(' ');
 
-    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + "ここに文章を載せる" + '&time=' + time;
+    // 本文設定
+    tag0 = listText[0] // タグの1つ目から検索中のタグを調べる
+    titlelist = eval(tag0 + "Text"); // タグ名からタイトルの連想配列を作る
+    text = eval(tag0 + "Article"); // タグ名から本文の配列を作る
+    for (const key in AWSText) {
+      if (titlelist[key] === h2Text) { // タイトルの配列キーを取得
+        var articleText = text[key] // articleTextに本文を代入
+      }
+    }
+
+    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + articleText + '&time=' + time;
   });
 }
