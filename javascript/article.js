@@ -68,17 +68,28 @@ function reply() { //コメント送信ボタン
   // 入力されたテキストを取得
   const text = Post_Text.value;
 
+  if (!text) { // 入力値が空でない場合のみ処理を実行
+    // 何も入力されていない場合の処理
+    alert('入力してください');
+    return
+  }
+
   // 改行を `<br>` タグに変換
   const convertedText = text.replace(/\r\n|\r|\n/g, '<br>');
 
-  // 3. h1要素を作成
-  const h1Element = document.createElement('h1');
+  // 3. p要素を作成
+  const pElement = document.createElement('p');
 
   // 4. h1要素にテキストを設定
-  h1Element.textContent = convertedText;
+  pElement.innerHTML = convertedText;
 
-  // 5. h1要素を返信コンテナに追加
-  replyContainer.appendChild(h1Element);
+  // 中央コンテナの位置を取得
+  const contentsDiv = document.querySelector('.contents.center-contents');
+  const divElement = document.createElement('div'); // div要素を作成
+  divElement.id = 'reply';
+  // div要素を中央コンテナの子要素として追加
+  contentsDiv.appendChild(divElement);
+  divElement.appendChild(pElement);
 
   // textareaのクリア
   Post_Text.value = '';
