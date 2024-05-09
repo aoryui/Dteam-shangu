@@ -111,6 +111,10 @@
     margin-top: 50px;
 }
 
+#goodbtn:hover{
+    cursor: pointer;
+}
+
 #good-count {
     position: fixed;
     background-color: transparent;
@@ -154,6 +158,10 @@
     width: 75px;
     background-color: #86c7f5;
     border: none;
+}
+
+#postbtn:hover{
+    cursor: pointer;
 }
 
 #contents {
@@ -283,3 +291,7 @@ li:hover {
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+input[type="text"], input[type="button"], input[type="submit"], input[type="reset"] {
+    cursor: pointer;
+  }
