@@ -115,6 +115,18 @@
     float: left;
 }
 
+#good-icon{
+    margin-right: 3px;
+    margin-top: 15px;
+    float: right;
+}
+
+#good-number{
+    margin-right: 5px;
+    margin-top: 15px;
+    float: right;
+}
+
 /* 右側コンテンツ */
 .right-contents {
     float: left;
