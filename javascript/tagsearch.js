@@ -68,10 +68,10 @@ var AWSTime2 = {1:"2024", 2:"04", 3:"26"}
 var AWSTime3 = {1:"2024", 2:"04", 3:"07"}
 var AWSTime4 = {1:"2024", 2:"03", 3:"28"}
 var AWSArticle = {
-  1:"AWSテキスト",
-  2:"AWSあああ",
-  3:"AWSかかか",
-  4:"AWSおいえｗｊろいえｗ"
+  1:"hoge<br>foo<br>bar",
+  2:"huga",
+  3:"piyo",
+  4:"hogera"
 };
 
 var beginnerText = {
@@ -88,6 +88,12 @@ var beginnerTime1 = {1:"2024", 2:"04", 3:"10"}
 var beginnerTime2 = {1:"2024", 2:"03", 3:"29"}
 var beginnerTime3 = {1:"2024", 2:"02", 3:"18"}
 var beginnerTime4 = {1:"2024", 2:"01", 3:"28"}
+var beginnerArticle = {
+  1:"hoge",
+  2:"huga",
+  3:"piyo",
+  4:"hogera"
+};
 
 var DockerText = {
   1:"Dockerのすゝめ",
@@ -103,6 +109,12 @@ var DockerTime1 = {1:"2024", 2:"04", 3:"30"}
 var DockerTime2 = {1:"2024", 2:"04", 3:"26"}
 var DockerTime3 = {1:"2024", 2:"04", 3:"07"}
 var DockerTime4 = {1:"2024", 2:"03", 3:"28"}
+var DockerArticle = {
+  1:"hoge",
+  2:"huga",
+  3:"piyo",
+  4:"hogera"
+};
 
 var JavaScriptText = {
   1:"【JavaScript】JavaScriptとは",
@@ -118,6 +130,12 @@ var JavaScriptTime1 = {1:"2024", 2:"04", 3:"30"}
 var JavaScriptTime2 = {1:"2024", 2:"04", 3:"26"}
 var JavaScriptTime3 = {1:"2024", 2:"04", 3:"07"}
 var JavaScriptTime4 = {1:"2024", 2:"03", 3:"28"}
+var JavaScriptArticle = {
+  1:"hoge",
+  2:"huga",
+  3:"piyo",
+  4:"hogera"
+};
 
 var JavaText = {
   1:"【Java】Javaとは",
@@ -133,6 +151,12 @@ var JavaTime1 = {1:"2024", 2:"04", 3:"30"}
 var JavaTime2 = {1:"2024", 2:"04", 3:"26"}
 var JavaTime3 = {1:"2024", 2:"04", 3:"07"}
 var JavaTime4 = {1:"2024", 2:"03", 3:"28"}
+var JavaArticle = {
+  1:"hoge",
+  2:"huga",
+  3:"piyo",
+  4:"hogera"
+};
 
 var PHPText = {
   1:"PHPのすすめ(応用編)",
@@ -148,6 +172,12 @@ var PHPTime1 = {1:"2024", 2:"04", 3:"10"}
 var PHPTime2 = {1:"2024", 2:"03", 3:"29"}
 var PHPTime3 = {1:"2024", 2:"02", 3:"18"}
 var PHPTime4 = {1:"2024", 2:"01", 3:"28"}
+var PHPArticle = {
+  1:"hoge",
+  2:"huga",
+  3:"piyo",
+  4:"hogera"
+};
 
 var poemText = {
   1:"スクラムとウォータフォール",
@@ -163,6 +193,12 @@ var poemTime1 = {1:"2024", 2:"04", 3:"30"}
 var poemTime2 = {1:"2024", 2:"04", 3:"26"}
 var poemTime3 = {1:"2024", 2:"04", 3:"07"}
 var poemTime4 = {1:"2024", 2:"03", 3:"28"}
+var poemArticle = {
+  1:"hoge",
+  2:"huga",
+  3:"piyo",
+  4:"hogera"
+};
 
 var PythonText = {
   1:"Pythonは楽しい",
@@ -178,6 +214,12 @@ var PythonTime1 = {1:"2024", 2:"04", 3:"30"}
 var PythonTime2 = {1:"2024", 2:"04", 3:"26"}
 var PythonTime3 = {1:"2024", 2:"04", 3:"07"}
 var PythonTime4 = {1:"2024", 2:"03", 3:"28"}
+var PythonArticle = {
+  1:"hoge",
+  2:"huga",
+  3:"piyo",
+  4:"hogera"
+};
 
 // 選択したタグに応じてarrayを変える
 let PostText;
@@ -269,9 +311,19 @@ for (const h2Tag of h2Tags) {
 
     // 本文設定
     tag0 = listText[0] // タグの1つ目から検索中のタグを調べる
+    switch (tag0){ // タグ名が日本語の場合英名に置き換える
+      case 'ポエム':
+        tag0 = 'poem';
+        break;
+      case '初心者':
+        tag0 = 'beginner';
+        break;
+      default:
+        break;
+    }
     titlelist = eval(tag0 + "Text"); // タグ名からタイトルの連想配列を作る
     text = eval(tag0 + "Article"); // タグ名から本文の配列を作る
-    for (const key in AWSText) {
+    for (const key in titlelist) {
       if (titlelist[key] === h2Text) { // タイトルの配列キーを取得
         var articleText = text[key] // articleTextに本文を代入
       }

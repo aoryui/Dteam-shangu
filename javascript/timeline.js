@@ -19,33 +19,75 @@ button3.addEventListener('click', () => {
 
 
 
-// script.jsファイルの内容
+var PostText = {
+  1:"AWSの始め方",
+  2:"Dockerが開発を変える！",
+  3:"初めてプログラミング言語を学ぶ方に、初心者におすすめな言語を目的別に解説！",
+  4:"ブランチ・マージの解説",
+  5:"C#で作成をサポートするオススメのツールを教えます！",
+  6:"C言語のススメ！",
+  7:"Pythonの環境構築について"
+};
+var PostTag1 = {1:"AWS"}
+var PostTag2 = {1:"Docker"}
+var PostTag3 = {1:"初心者"}
+var PostTag4 = {1:"GitHub"}
+var PostTag5 = {1:"C#"}
+var PostTag6 = {1:"C"}
+var PostTag7 = {1:"Python"}
+var PostTime1 = {1:"2024", 2:"04", 3:"22"}
+var PostTime2 = {1:"2024", 2:"03", 3:"19"}
+var PostTime3 = {1:"2024", 2:"03", 3:"03"}
+var PostTime4 = {1:"2024", 2:"03", 3:"02"}
+var PostTime5 = {1:"2024", 2:"02", 3:"29"}
+var PostTime6 = {1:"2024", 2:"02", 3:"28"}
+var PostTime7 = {1:"2024", 2:"02", 3:"20"}
+var PostArticle = {
+  1:"hoge",
+  2:"huga",
+  3:"piyo",
+  4:"hogera",
+  5:"hogehoge",
+  6:"foo",
+  7:"bar",
+};
 
-// タイムラインにイベントを追加する関数
-function addEvent() {
-    // イベントの時間と説明を入力から取得
-    const eventTime = document.getElementById('eventTime').value;
-    const eventDescription = document.getElementById('eventDescription').value;
-    
-    // タイムラインの要素を取得
-    const timeline = document.getElementById('timeline');
-    
-    // タイムラインイベントの要素を作成
-    const eventElement = document.createElement('div');
-    eventElement.classList.add('timeline-event');
-    
-    // 時間と説明を表示するための要素を追加
-    eventElement.innerHTML = `
-        <div><strong>${eventTime}</strong></div>
-        <div>${eventDescription}</div>
-    `;
-    
-    // タイムラインにイベントを追加
-    timeline.appendChild(eventElement);
-    
-    // 入力フォームをクリア
-    document.getElementById('eventTime').value = '';
-    document.getElementById('eventDescription').value = '';
+// キーの数を取得
+const numberOfKeys = Object.keys(PostText).length;
+// 中央コンテナの位置を取得
+const contentsDiv = document.querySelector('.contents.center-contents');
+
+for (let i = 1; i <= numberOfKeys; i++) {
+  const divElement = document.createElement('div'); // div要素を作成
+  divElement.id = 'contents';
+  // div要素を中央コンテナの子要素として追加
+  contentsDiv.appendChild(divElement);
+
+  // 日付表示
+  const aElement = document.createElement('a'); // a要素を作成
+  timedata = eval("PostTime" + i);
+  const year = timedata[1];
+  const month = timedata[2];
+  const day = timedata[3];
+  let timetext = year + "/" + month + "/" + day
+  aElement.textContent = timetext;
+  // a要素をdiv要素の子要素として追加
+  divElement.appendChild(aElement);
+
+  // タイトル表示
+  const h1Element = document.createElement('h2'); // h2要素を作成
+  h1Element.textContent = PostText[i];
+  // h1要素をdiv要素の子要素として追加
+  divElement.appendChild(h1Element);
+  
+  // タグ表示
+  let dictionary = eval("PostTag" + i);
+  for (const key in dictionary) {
+    const liElement = document.createElement('li'); // li要素を作成
+    liElement.textContent = dictionary[key];
+    // li要素をdiv要素の子要素として追加
+    divElement.appendChild(liElement);
+  }
 }
 
 // find関数を使った検索フォーム
@@ -91,6 +133,16 @@ for (const h2Tag of h2Tags) {
     const arr =listText;
     const tagtext = arr.join(' ');
 
-    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + "ここに文章を載せる" + '&time=' + time;
+    // 本文設定
+    titlelist = eval("PostText"); // タグ名からタイトルの連想配列を作る
+    text = eval("PostArticle"); // タグ名から本文の配列を作る
+    for (const key in titlelist) {
+      if (titlelist[key] === h2Text) { // タイトルの配列キーを取得
+        var articleText = text[key] // articleTextに本文を代入
+      }
+    }
+
+    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + articleText + '&time=' + time;
   });
 }
+
