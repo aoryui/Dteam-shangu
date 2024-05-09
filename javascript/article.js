@@ -68,28 +68,17 @@ function reply() { //コメント送信ボタン
   // 入力されたテキストを取得
   const text = Post_Text.value;
 
-  if (!text) { // 入力値が空でない場合のみ処理を実行
-    // 何も入力されていない場合の処理
-    alert('入力してください');
-    return
-  }
-
   // 改行を `<br>` タグに変換
   const convertedText = text.replace(/\r\n|\r|\n/g, '<br>');
 
-  // 3. p要素を作成
-  const pElement = document.createElement('p');
+  // 3. h1要素を作成
+  const h1Element = document.createElement('h1');
 
   // 4. h1要素にテキストを設定
-  pElement.innerHTML = convertedText;
+  h1Element.textContent = convertedText;
 
-  // 中央コンテナの位置を取得
-  const contentsDiv = document.querySelector('.contents.center-contents');
-  const divElement = document.createElement('div'); // div要素を作成
-  divElement.id = 'reply';
-  // div要素を中央コンテナの子要素として追加
-  contentsDiv.appendChild(divElement);
-  divElement.appendChild(pElement);
+  // 5. h1要素を返信コンテナに追加
+  replyContainer.appendChild(h1Element);
 
   // textareaのクリア
   Post_Text.value = '';
@@ -107,17 +96,24 @@ document.querySelectorAll('.FlexTextarea').forEach(flexTextarea)
 
 const Post_Text = document.getElementById('post_text');
 // 1. 返信コンテナ要素を取得
-const replyContainer = document.getElementById('reply-form');
+const replyContainer = document.getElementById('reply');
 const SubmitButton = document.querySelector('input[type="submit"]');
 
 //グッドボタン機能
 // クリック回数をカウントする変数
+// クリック回数をカウントする変数
 let clickCount = 0;
 
 // ボタンをクリックしたときの処理
-document.getElementById("goodbtn").addEventListener("click", function () {
-  clickCount++; // クリック回数を増やす
+document.getElementById("goodbtn").addEventListener("click", function() {
+  // クリック回数が偶数の場合は1を加算し、奇数の場合は1を減算する
+  if (clickCount % 2 === 0) {
+    clickCount++;
+  } else {
+    clickCount--;
+  }
   toggleIcon(); // アイコンを切り替える関数を呼び出す
+  updateCount(); // カウントを更新する
 });
 
 // アイコンを切り替える関数
@@ -128,4 +124,10 @@ function toggleIcon() {
   } else {
     document.getElementById("iconPath").setAttribute("d", "M2 8.99997H5V21H2C1.44772 21 1 20.5523 1 20V9.99997C1 9.44769 1.44772 8.99997 2 8.99997ZM7.29289 7.70708L13.6934 1.30661C13.8693 1.13066 14.1479 1.11087 14.3469 1.26016L15.1995 1.8996C15.6842 2.26312 15.9026 2.88253 15.7531 3.46966L14.5998 7.99997H21C22.1046 7.99997 23 8.8954 23 9.99997V12.1043C23 12.3656 22.9488 12.6243 22.8494 12.8658L19.755 20.3807C19.6007 20.7554 19.2355 21 18.8303 21H8C7.44772 21 7 20.5523 7 20V8.41419C7 8.14897 7.10536 7.89462 7.29289 7.70708Z");
   }
+}
+
+// クリック回数を更新する関数
+function updateCount() {
+  // クリック回数が偶数の場合は0を、奇数の場合は1を表示する
+  document.getElementById("good-count").textContent = clickCount % 2;
 }

@@ -111,6 +111,16 @@
     margin-top: 50px;
 }
 
+#good-count {
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    float: right;
+    margin-top: 45px;
+    margin-left: 50px;
+    font-size: 32px;
+}
+
 /* 全体コンテンツ */
 .Allcontainer {
     display: flex;
