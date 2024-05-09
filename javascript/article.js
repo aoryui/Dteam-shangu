@@ -107,7 +107,7 @@ document.querySelectorAll('.FlexTextarea').forEach(flexTextarea)
 
 const Post_Text = document.getElementById('post_text');
 // 1. 返信コンテナ要素を取得
-const replyContainer = document.getElementById('reply');
+const replyContainer = document.getElementById('reply-form');
 const SubmitButton = document.querySelector('input[type="submit"]');
 
 //グッドボタン機能
