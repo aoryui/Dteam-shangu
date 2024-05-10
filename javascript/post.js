@@ -30,6 +30,17 @@ function post(){
     const tag = Post_Tag.value;
     const text = Post_Text.value;
 
+    if (!text) { // 入力値が空でない場合のみ処理を実行
+        // 何も入力されていない場合の処理
+        alert('記事を作成してください');
+        return
+    }else if (!title){
+        alert('タイトルが入力されていません');
+        return
+    }else if (!tag){
+        alert('タグが設定されていません');
+        return
+    }
 
     // 改行を `<br>` タグに変換
     const convertedTitle = title.replace(/\r\n|\r|\n/g, '<br>');

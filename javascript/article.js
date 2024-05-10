@@ -138,6 +138,9 @@ function toggleIcon() {
   }
 }
 
+if (!goods){
+  Gooddisplay.textContent = 0; // いいね数の初期値
+}
 // クリック回数を更新する関数
 function updateCount() {
   // クリック回数が奇数の場合は+1を、偶数の場合は-1する
