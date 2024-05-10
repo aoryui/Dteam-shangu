@@ -339,7 +339,7 @@ const liTags = document.querySelectorAll('li'); // liタグを取得
 for (const liTag of liTags) {
   liTag.addEventListener('click', function() {
     const text = this.textContent;
-    window.location.href = 'tagsearch.html?tag=' + text; // URLを組み立てる
+    window.location.href = 'tagsearch.html?tag=' +  encodeURIComponent(text); // URLを組み立てる
   });
 }
 
@@ -393,6 +393,6 @@ for (const h2Tag of h2Tags) {
       }
     }
 
-    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + articleText + '&time=' + time + '&good=' + goodcount;
+    window.location.href = 'article.html?title=' +  encodeURIComponent(h2Text) + '&tag=' +  encodeURIComponent(tagtext) + '&text=' +  encodeURIComponent(articleText) + '&time=' + time + '&good=' + goodcount;
   });
 }
