@@ -48,7 +48,16 @@ function addEvent() {
     document.getElementById('eventDescription').value = '';
 }
 
-
+// find関数を使った検索フォーム
+const select = document.getElementById('lang');
+  const submitButton = document.getElementById('sort');
+  submitButton.addEventListener('click', function(event) {
+    event.preventDefault(); // デフォルトの送信動作をキャンセル
+    const selectedOption = select.options[select.selectedIndex];
+    const selectedValue = selectedOption.value;
+    const url = 'tagsearch.html?tag=' + selectedValue;
+    window.location.href = url;
+});
 
 // タグをクリックしたらtagsearch.htmlへ遷移
 const liTags = document.querySelectorAll('li'); // liタグを取得
@@ -82,7 +91,23 @@ for (const h2Tag of h2Tags) {
     const arr =listText;
     const tagtext = arr.join(' ');
 
-    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + "ここに文章を載せる" + '&time=' + time;
+    // 本文設定
+    titlelist = eval("PostText"); // タグ名からタイトルの連想配列を作る
+    text = eval("PostArticle"); // タグ名から本文の配列を作る
+    for (const key in titlelist) {
+      if (titlelist[key] === h2Text) { // タイトルの配列キーを取得
+        var articleText = text[key] // articleTextに本文を代入
+      }
+    }
+    // いいね数設定
+    goods = eval("PostGood");
+    for (const key in titlelist) {
+      if (titlelist[key] === h2Text) { // タイトルの配列キーを取得
+        var goodcount = PostGood[key] // articleTextにgoodを代入
+      }
+    }
+
+    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + articleText + '&time=' + time + '&good=' + goodcount;
   });
 }
 //ヘッダーのタグ検索機能
