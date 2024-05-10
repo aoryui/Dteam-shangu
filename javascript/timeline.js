@@ -40,14 +40,14 @@ var PostTime4 = {1:"2024", 2:"03", 3:"02"}
 var PostTime5 = {1:"2024", 2:"02", 3:"29"}
 var PostTime6 = {1:"2024", 2:"02", 3:"28"}
 var PostTime7 = {1:"2024", 2:"02", 3:"20"}
-var PostGood = {
-  1:5241,
+var PostGood = { // CSSの関係上4桁以上の数字は表示できないよ！
+  1:524,
   2:21,
-  3:2342,
+  3:232,
   4:542,
-  5:2312,
+  5:231,
   6:3,
-  7:2423,
+  7:242,
 }
 var PostArticle = {
   1:"hoge",
@@ -156,8 +156,15 @@ for (const h2Tag of h2Tags) {
         var articleText = text[key] // articleTextに本文を代入
       }
     }
+    // いいね数設定
+    goods = eval("PostGood");
+    for (const key in titlelist) {
+      if (titlelist[key] === h2Text) { // タイトルの配列キーを取得
+        var goodcount = PostGood[key] // articleTextにgoodを代入
+      }
+    }
 
-    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + articleText + '&time=' + time;
+    window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + articleText + '&time=' + time + '&good=' + goodcount;
   });
 }
 
