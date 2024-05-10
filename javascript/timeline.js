@@ -48,16 +48,7 @@ function addEvent() {
     document.getElementById('eventDescription').value = '';
 }
 
-// find関数を使った検索フォーム
-const select = document.getElementById('lang');
-  const submitButton = document.getElementById('sort');
-  submitButton.addEventListener('click', function(event) {
-    event.preventDefault(); // デフォルトの送信動作をキャンセル
-    const selectedOption = select.options[select.selectedIndex];
-    const selectedValue = selectedOption.value;
-    const url = 'tagsearch.html?tag=' + selectedValue;
-    window.location.href = url;
-});
+
 
 // タグをクリックしたらtagsearch.htmlへ遷移
 const liTags = document.querySelectorAll('li'); // liタグを取得
@@ -94,3 +85,17 @@ for (const h2Tag of h2Tags) {
     window.location.href = 'article.html?title=' + h2Text + '&tag=' + tagtext + '&text=' + "ここに文章を載せる" + '&time=' + time;
   });
 }
+//ヘッダーのタグ検索機能
+const inputElement = document.getElementById('searchInput');
+inputElement.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const inputValue = event.target.value.trim(); // 空白削除
+    if (inputValue) { // 入力値が空でない場合のみ処理を実行
+      console.log(inputValue);
+      window.location.href = 'tagsearch.html?tag=' + inputValue;
+    } else {
+      // 何も入力されていない場合の処理
+      alert('タグ名を入力してください');
+    }
+  }
+});
