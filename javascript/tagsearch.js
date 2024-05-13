@@ -76,8 +76,8 @@ var AWSGood = { // CSSの関係上4桁以上の数字は表示できないよ！
 var AWSArticle = {
   1:"AWSのアカウントの作成を作成して、<br>ルートユーザーのアカウント設定して、<br>IAMユーザーの作成して、<br>なんやかんやで完了！",
   2:"AWSにPythonのプログラムをデプロイして<br>あんなことやらこんなことして<br>できました！",
-  3:"皆さん、知っていますか？<br>実はAWSって美味しいんですよ！<br>今回はAWSの美味しい調理方法を伝授します！<br>【調理方法】<br>・黙って生で食えや",
-  4:"AWSってすごいんですよ。<br>本当にすごい。<br>もうね、すごい。<br>「す」の「ごい」です。<br>ゴイゴイスーです。<br>ここで「スー」を差し上げます。"
+  3:"皆さん、知っていますか？<br>実はAWSって美味しいんですよ！<br>今回はAWSの美味しい調理方法を伝授します！<br>",
+  4:"AWSってすごいんですよ。<br>本当にすごい。<br>すごい。"
 };
 
 var beginnerText = {
@@ -101,10 +101,10 @@ var beginnerGood = { // CSSの関係上4桁以上の数字は表示できない�
   4:22,
 }
 var beginnerArticle = {
-  1:"皆さん関数の名前で「namae」「nenrei」とか命名していませんか？<br>そういう人は今すぐやめましょう。<br>仕事減りますよ。",
+  1:"皆さん関数の名前で「namae」「nenrei」とか命名していませんか？<br>そういう人は今すぐやめましょう。",
   2:"プログラマー必見サイトを教えます。<br>1.Qiita<br>2.Zenn<br>3.X<br>4.Google<br>5.GitHub",
-  3:"最近リモートワーク流行ってますよね。<br>働きやすくて出社なんてクソくらえって感じですよね。<br>気づけば仕事サボってますよね。<br>何してんだおめぇ。<br>バカやってねぇで働け。",
-  4:"MarkDownをマスターすると、<br>READMEの時だけでなく、日々の仕事や生活の時にも役立ちます。<br>そこで、サッと使えるMarkDownのチートシートを作成しました！<br>作成するのやめました！"
+  3:"最近リモートワーク流行ってますよね。<br>働きやすくて出社なんてクソくらえって感じですよね。<br>気づけば仕事サボってますよね。",
+  4:"MarkDownをマスターすると、<br>READMEの時だけでなく、日々の仕事や生活の時にも役立ちます。<br>そこで、サッと使えるMarkDownのチートシートを作成しました！"
 };
 
 var DockerText = {
@@ -128,10 +128,10 @@ var DockerGood = { // CSSの関係上4桁以上の数字は表示できないよ
   4:42,
 }
 var DockerArticle = {
-  1:"Dockerの公式ドキュメントって本当に分かりにくい。<br>ヴォイニッチ手稿の次くらいに読みづらい！<br>そこで今回は日本人向けにDockerの説明書を作成しました！<br><br>「Docker」の説明「どっか」行っちゃった笑",
+  1:"Dockerの公式ドキュメントって本当に分かりにくい。<br>そこで今回は日本人向けにDockerの説明書を作成しました！<",
   2:"開発していたら、環境構築が大変ですようね。<br>仮想環境を作るにしても動作が遅かったりしますよね。<br>その悩みDockerが解決します。",
   3:"Dockerのバージョン管理のやり方を伝授します。<br>コマンド実行したらできますよ",
-  4:"Dockerすごい！<br>「す」の「ごい」！<br>ゴイゴイスー！<br>スーを差し上げます！"
+  4:"Dockerすごい！"
 };
 
 var JavaScriptText = {
@@ -185,7 +185,7 @@ var JavaArticle = {
   1:"Javaとはなんでしょう。<br>JavaとJavaScriptは別物です。<br>両社は全くの別物です。<br>「LiveScript」がJavaの知名度にあやかって、名前をパクったものがJavaScriptです。<br>つまり、JavaScriptをJavaと略す人は、JavaScript開発者の手のひらの上で踊らされているということですね。",
   2:"Javaにおいて「いいコード」とは何でしょうか<br>読みやすく、無駄がなく、保守しやすい。<br>そんなコードの書き方を今回は教えます。",
   3:"Javaは様々なシステムで採用されている言語です。<br>Javaをマスターすればシステムエンジニアへの道も見えてくるはずです。<br>今回はJavaの学習から仕事につなげるまでのロードマップを考えていこうと思います。",
-  4:"タイトルのとおりです。<br>「JavaScript」を「Java」と略すなというはなしです。<br>Javaと略す人は「除籍」される可能性があります。"
+  4:"タイトルのとおりです。<br>「JavaScript」を「Java」と略すなというはなしです。"
 };
 
 var PHPText = {
@@ -236,9 +236,9 @@ var poemGood = { // CSSの関係上4桁以上の数字は表示できないよ�
   4:123,
 }
 var poemArticle = {
-  1:"今日はスクラムとウォータフォールの違いについて解説していくぜ<br>ゆっくりしていってね。",
-  2:"「なんだこいつ おれのかおむだんてんのりするつもりかな？」<br>こんなこと言われない為にも、<br>著作権について学んでおく必要があると思います。",
-  3:"VSCode美味い！<br>食ってみな飛ぶぞ",
+  1:"今日はスクラムとウォータフォールの違いについて解説していくぜ。<br>ゆっくりしていってね。",
+  2:"なんやかんや問題起きる前に、著作権について学んでおきましょう。",
+  3:"VSCode美味い！<br>美味VSCode。",
   4:"チーム開発を快適にするためにはGitは必要不可欠です。<br>今回はGit管理の王道、GitHubの環境構築について説明していきます。"
 };
 
@@ -323,17 +323,6 @@ for (let i = 1; i <= numberOfKeys; i++) {
   divElement.innerHTML += GoodIcon;
 }
 
-// 検索フォーム
-const select = document.getElementById('lang');
-  const submitButton = document.getElementById('sort');
-  submitButton.addEventListener('click', function(event) {
-    event.preventDefault(); // デフォルトの送信動作をキャンセル
-    const selectedOption = select.options[select.selectedIndex];
-    const selectedValue = selectedOption.value;
-    const url = 'tagsearch.html?tag=' + selectedValue;
-    window.location.href = url;
-});
-
 // タグをクリックしたらtagsearch.htmlへ遷移
 const liTags = document.querySelectorAll('li'); // liタグを取得
 for (const liTag of liTags) {
@@ -366,7 +355,7 @@ for (const h2Tag of h2Tags) {
     const tagtext = arr.join(' ');
 
     // 本文設定
-    tag0 = listText[0] // タグの1つ目から検索中のタグを調べる
+    var tag0 = listText[0] // タグの1つ目から検索中のタグを調べる
     switch (tag0){ // タグ名が日本語の場合英名に置き換える
       case 'ポエム':
         tag0 = 'poem';
@@ -396,3 +385,18 @@ for (const h2Tag of h2Tags) {
     window.location.href = 'article.html?title=' +  encodeURIComponent(h2Text) + '&tag=' +  encodeURIComponent(tagtext) + '&text=' +  encodeURIComponent(articleText) + '&time=' + time + '&good=' + goodcount;
   });
 }
+
+//タグ検索機能
+const inputElement = document.getElementById('searchInput');
+inputElement.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const inputValue = event.target.value.trim(); // 空白削除
+    if (inputValue) { // 入力値が空でない場合のみ処理を実行
+      console.log(inputValue);
+      window.location.href = 'tagsearch.html?tag=' +  encodeURIComponent(inputValue);
+    } else {
+      // 何も入力されていない場合の処理
+      alert('タグ名を入力してください');
+    }
+  }
+});
