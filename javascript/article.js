@@ -71,10 +71,20 @@ function reply() { //コメント送信ボタン
     // 何も入力されていない場合の処理
     alert('入力してください');
     return
-  }
+    
+  }const comment = text.replace(/<|&/g, function(match) {
+    switch (match) {
+      case '<':
+        return '&lt;';
+      case '&':
+        return '&amp;';
+      default:
+        return match;
+    }
+  });
 
   // 改行を `<br>` タグに変換
-  const convertedText = text.replace(/\r\n|\r|\n/g, '<br>');
+  const convertedText = comment.replace(/\r\n|\r|\n/g, '<br>');
 
   // 3. p要素を作成
   const pElement = document.createElement('p');
