@@ -21,7 +21,7 @@ loginForm.addEventListener('submit', (event) => {
     }
     console.log('アカウント' + result);
     if (passdic[result] === password){
-        window.location.href = 'profile.html?email=' + email;
+        window.location.href = 'profile.html?user=' + result; // ユーザーナンバーを送信
     }else{
         loginResult.textContent = 'メールアドレスまたはパスワードが間違っています。';
     }
