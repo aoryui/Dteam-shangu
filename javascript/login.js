@@ -11,18 +11,19 @@ loginForm.addEventListener('submit', (event) => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    // 指定した条件をチェック
-    const isKdAccount = email.includes('kd');
-    const isValidPassword = password === 'pass'; // パスワードの条件を指定
-
-    if (isKdAccount && isValidPassword) {
-        // ログイン成功時の処理
-
-        // メイン画面への遷移
-        // メイン画面のURLを指定して画面遷移
-        window.location.href = 'post.html';
-    } else {
-        // ログイン失敗時の処理
+    // emailに対応するemaildicのkeyを探す
+    let result = "なし"; // resultに初期値を「なし」を設定
+    for (const key in emaildic) {
+        if (emaildic[key] === email) {
+            result = key; // keyをresultに代入
+            break; // 探索を停止
+        }
+    }
+    console.log('アカウント' + result);
+    if (passdic[result] === password){
+        window.location.href = 'profile.html?email=' + email;
+    }else{
         loginResult.textContent = 'メールアドレスまたはパスワードが間違っています。';
     }
+
 });
