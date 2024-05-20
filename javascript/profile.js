@@ -1,9 +1,14 @@
+// ユーザーナンバーをuserに代入
+const urlParams = new URLSearchParams(window.location.search);
+let user = urlParams.get('user');
+
 const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
 const button3 = document.getElementById('postbtn');
 const button4 = document.getElementById('myButton');
+const cpbtn = document.getElementById("changepass");
 const modal = document.getElementById("myModal");
-const btn = document.getElementById("myButton");
+
 const span = document.getElementsByClassName("close")[0];
 
 button1.addEventListener('click', () => {
@@ -19,6 +24,11 @@ button3.addEventListener('click', () => {
   window.location.href = 'post.html';
 });
 
+cpbtn.addEventListener('click', () => {
+  // changepassに遷移
+  window.location.href = 'changepass.html?user=' + user;
+});
+
 button4.addEventListener('click', () => {
   // ログアウトのメッセージボックス表示
   alert("ログアウトしました！");
@@ -26,12 +36,9 @@ button4.addEventListener('click', () => {
   window.location.href = 'login.html';
 });
 
-// ユーザーナンバーをuserに代入
-const urlParams = new URLSearchParams(window.location.search);
-let user = urlParams.get('user');
-
 // プロフィールの反映
 const contentsDiv = document.getElementById('contents');
+document.querySelector('.usercontents img').src = userimg[user];
 contentsDiv.querySelector('nickname').textContent = nickname[user];
 contentsDiv.querySelector('realname').textContent = realname[user];
 contentsDiv.querySelector('a').textContent = emaildic[user];

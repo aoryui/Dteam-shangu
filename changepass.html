@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ログイン画面</title>
+    <!-- CSSファイルを読み込む -->
+    <link rel="stylesheet" type="text/css" href="./css/changepass.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>パスワード変更</h2>
+        <!-- ログインフォーム -->
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="nowpassword">現在のパスワード:</label>
+                <input type="password" id="now-password" name="now-password" placeholder="現在のパスワード" required>
+                <p></p>
+                <label for="newpassword">新しいパスワード:</label>
+                <input type="password" id="new-password" name="new-password" placeholder="新しいパスワード" required>
+                <p></p>
+                <label for="newpassword2">新しいパスワードの確認:</label>
+                <input type="password" id="new-password2" name="new-password2" placeholder="新しいパスワードの確認" required>
+                <p></p>
+            </div>
+            <button type="submit">ログイン</button>
+        </form>
+    </div>
+
+    <!-- JavaScriptファイルを読み込む -->
+    <script src="./javascript/userdata.js"></script>
+    <script src="./javascript/changepass.js"></script>
+</body>
+
+</html>
