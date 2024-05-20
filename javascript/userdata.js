@@ -11,6 +11,12 @@ var passdic = { // パスワード
     3:"3333"
 }
 
+var userimg = { // 画像
+    1:"image/一郎.jpg",
+    2:"image/二郎.jpg",
+    3:"image/noimage.jpg"
+}
+
 var nickname = { // ニックネーム
     1:"いちろう",
     2:"ジロウ",
@@ -51,12 +57,5 @@ var tag2 = { // タグ ユーザー2
 }
 
 var tag3 = { // タグ ユーザー3
-    1:"RaspberryPi",
-    2:"ESP32",
-    3:"マイクロコンピューター",
-    4:"C",
-    5:"R",
-    6:"B",
-    7:"C++",
-    8:"objective-C"
+    
 }

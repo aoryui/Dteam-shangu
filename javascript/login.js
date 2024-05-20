@@ -20,7 +20,12 @@ loginForm.addEventListener('submit', (event) => {
         }
     }
     console.log('アカウント' + result);
-    if (passdic[result] === password){
+    const omegalul = password.slice(0, 1)
+    let loginpass = ""
+    for (let i = 0; i < 4; i++) {
+        loginpass += omegalul;
+    }
+    if (passdic[result] === loginpass){
         window.location.href = 'profile.html?user=' + result; // ユーザーナンバーを送信
     }else{
         loginResult.textContent = 'メールアドレスまたはパスワードが間違っています。';
