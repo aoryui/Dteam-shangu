@@ -1,6 +1,11 @@
 const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
 const button3 = document.getElementById('postbtn');
+const button4 = document.getElementById('myButton');
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("myButton");
+const span = document.getElementsByClassName("close")[0];
+
 button1.addEventListener('click', () => {
     // 投稿に遷移
     window.location.href = 'timeline.html';
@@ -12,6 +17,13 @@ button2.addEventListener('click', () => {
 button3.addEventListener('click', () => {
   // 質問に遷移
   window.location.href = 'post.html';
+});
+
+button4.addEventListener('click', () => {
+  // ログアウトのメッセージボックス表示
+  alert("ログアウトしました！");
+  // ログインに遷移
+  window.location.href = 'login.html';
 });
 
 // ユーザーナンバーをuserに代入
