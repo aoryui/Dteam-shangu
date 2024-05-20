@@ -13,6 +13,11 @@ button2.addEventListener('click', () => {
   window.location.href = 'question.html';
 });
 
+user.addEventListener('click', () => {
+  // 他ユーザーのプロフィール画面へ遷移
+  window.location.href = 'othersprofile.html';
+});
+
 // URLから検索されたタグ名を受け取る
 const Tag = document.getElementById('Tag');
 const urlParams = new URLSearchParams(window.location.search);
@@ -162,3 +167,7 @@ function updateCount() {
     Gooddisplay.textContent = goods;
   }
 }
+
+
+// span要素を取得
+var span = document.getElementById('navigateSpan');
