@@ -1,6 +1,11 @@
 const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
 const button3 = document.getElementById('postbtn');
+const button4 = document.getElementById('myButton');
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("myButton");
+const span = document.getElementsByClassName("close")[0];
+
 button1.addEventListener('click', () => {
     // 投稿に遷移
     window.location.href = 'timeline.html';
@@ -14,25 +19,24 @@ button3.addEventListener('click', () => {
   window.location.href = 'post.html';
 });
 
-const urlParams = new URLSearchParams(window.location.search);
-let email = urlParams.get('email');
+button4.addEventListener('click', () => {
+  // ログアウトのメッセージボックス表示
+  alert("ログアウトしました！");
+  // ログインに遷移
+  window.location.href = 'login.html';
+});
 
-// ユーザーの配列キーを探索
-let result; // resultに初期値を「なし」を設定
-for (const key in emaildic) {
-    if (emaildic[key] === email) {
-        result = key; // keyをresultに代入
-        break; // 探索を停止
-    }
-}
+// ユーザーナンバーをuserに代入
+const urlParams = new URLSearchParams(window.location.search);
+let user = urlParams.get('user');
 
 // プロフィールの反映
 const contentsDiv = document.getElementById('contents');
-contentsDiv.querySelector('nickname').textContent = nickname[result];
-contentsDiv.querySelector('realname').textContent = realname[result];
-contentsDiv.querySelector('a').textContent = email;
+contentsDiv.querySelector('nickname').textContent = nickname[user];
+contentsDiv.querySelector('realname').textContent = realname[user];
+contentsDiv.querySelector('a').textContent = emaildic[user];
 const right = document.querySelector('.usercontents.user-right');
-let tagdic = eval("tag" + result)
+let tagdic = eval("tag" + user)
 for (const key in tagdic) {
     const liElement = document.createElement('li'); // li要素を作成
     liElement.textContent = tagdic[key];
