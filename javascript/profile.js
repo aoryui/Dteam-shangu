@@ -36,19 +36,22 @@ button4.addEventListener('click', () => {
   window.location.href = 'login.html';
 });
 
-// プロフィールの反映
-const contentsDiv = document.getElementById('contents');
-document.querySelector('.usercontents img').src = userimg[user];
-contentsDiv.querySelector('nickname').textContent = nickname[user];
-contentsDiv.querySelector('realname').textContent = realname[user];
-contentsDiv.querySelector('a').textContent = emaildic[user];
-const right = document.querySelector('.usercontents.user-right');
-let tagdic = eval("tag" + user)
-for (const key in tagdic) {
+if(user != null){
+  // プロフィールの反映
+  const contentsDiv = document.getElementById('contents');
+  document.querySelector('.usercontents img').src = userimg[user];
+  contentsDiv.querySelector('nickname').textContent = nickname[user];
+  contentsDiv.querySelector('realname').textContent = realname[user];
+  contentsDiv.querySelector('a').textContent = emaildic[user];
+  const right = document.querySelector('.usercontents.user-right');
+  let tagdic = eval("tag" + user)
+  for (const key in tagdic) {
     const liElement = document.createElement('li'); // li要素を作成
     liElement.textContent = tagdic[key];
     right.appendChild(liElement);
+  }
 }
+
 
 // タグをクリックしたらtagsearch.htmlへ遷移
 const liTags = document.querySelectorAll('li'); // liタグを取得
