@@ -135,6 +135,7 @@
 .user-left img{
     width: 100%;
     height: 100%;
+    object-fit: cover; /* 画像を枠に合わせて切り抜く */
 }
 
 /* 右側コンテンツ */
@@ -153,9 +154,11 @@
 /* 投稿 */
 #contents {
     display: flex;
-    width: 800px;
-    margin: 30px auto;
-    padding: 20px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: none;
+    margin-right: none;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
