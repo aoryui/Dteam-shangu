@@ -11,6 +11,18 @@
     padding: 0px;
 }
 
+#changepass {
+    background-color: #68B7F0;
+    color: white;
+    font-weight: bold;
+}
+
+#logout {
+    background-color: #68B7F0;
+    color: white;
+    font-weight: bold;
+}
+
 #menu {
     float: left;
     background-color: transparent;
