@@ -1,3 +1,9 @@
+//urlからuser取得
+const urlParams = new URLSearchParams(window.location.search);
+let usernum = urlParams.get('user');
+if (usernum == null){
+  usernum = 0;
+};
 // DOM要素を取得
 const inputField = document.getElementById('inputField');
 const displayButton = document.getElementById('displayButton');
@@ -11,17 +17,17 @@ const button3 = document.getElementById('postbtn');
 
 button1.addEventListener('click', () => {
     // 投稿に遷移
-    window.location.href = 'timeline.html';
+    window.location.href = 'timeline.html?user=' + usernum;
 });
 
 button2.addEventListener('click', () => {
     // 質問に遷移
-    window.location.href = 'question.html';
+    window.location.href = 'question.html?user=' + usernum;
 });
 
 button3.addEventListener('click', () => {
   // 質問に遷移
-  window.location.href = 'post.html';
+  window.location.href = 'post.html?user=' + usernum;
 });
 
 
@@ -59,5 +65,5 @@ function post() {
 
 //アイコンからプロフィールに画面遷移
 document.getElementById('userIcon').addEventListener('click', function() {
-    window.location.href = 'profile.html';
+    window.location.href = 'profile.html?user=' + usernum;
   });

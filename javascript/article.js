@@ -1,23 +1,3 @@
-// ヘッダー
-const button1 = document.getElementById('timeline');
-const button2 = document.getElementById('question');
-
-button1.addEventListener('click', () => {
-  // ページ1に遷移
-  window.location.href = 'timeline.html';
-});
-
-
-button2.addEventListener('click', () => {
-  // ページ3に遷移
-  window.location.href = 'question.html';
-});
-
-user.addEventListener('click', () => {
-  // 他ユーザーのプロフィール画面へ遷移
-  window.location.href = 'othersprofile.html';
-});
-
 // URLから検索されたタグ名を受け取る
 const Tag = document.getElementById('Tag');
 const urlParams = new URLSearchParams(window.location.search);
@@ -26,6 +6,40 @@ let title = urlParams.get('title');
 let tag = urlParams.get('tag');
 let text = urlParams.get('text');
 let time = urlParams.get('time');
+let usernum = urlParams.get('user');
+if (usernum == null){
+  usernum = 0;
+};
+
+// ヘッダー
+const button1 = document.getElementById('timeline');
+const button2 = document.getElementById('question');
+const button3 = document.getElementById('postbtn');
+const usernametext = document.getElementById('usernametext');
+
+button1.addEventListener('click', () => {
+  // ページ1に遷移
+  window.location.href = 'timeline.html?user=' + usernum;
+});
+
+
+button2.addEventListener('click', () => {
+  // ページ3に遷移
+  window.location.href = 'question.html?user=' + usernum;
+});
+button3.addEventListener('click', () => {
+  // 質問に遷移
+  window.location.href = 'post.html?user=' + usernum;
+});
+
+user.addEventListener('click', () => {
+  // 他ユーザーのプロフィール画面へ遷移
+  window.location.href = 'othersprofile.html';
+});
+usernametext.addEventListener('click', () => {
+  // 他ユーザーのプロフィール画面へ遷移
+  window.location.href = 'othersprofile.html';
+});
 
 if (time != null) { //article.htmlが直接開かれた場合、要素の置き換えをしない
   const contentsDiv = document.getElementById('contents');
@@ -65,7 +79,7 @@ const liTags = document.querySelectorAll('li'); // liタグを取得
 for (const liTag of liTags) {
   liTag.addEventListener('click', function () {
     const text = this.textContent;
-    window.location.href = 'tagsearch.html?tag=' + text; // URLを組み立てる
+    window.location.href = 'tagsearch.html?tag=' + text + '&user=' + usernum; // URLを組み立てる
   });
 }
 
@@ -100,8 +114,21 @@ function reply() { //コメント送信ボタン
   const contentsDiv = document.querySelector('.contents.center-contents');
   const divElement = document.createElement('div'); // div要素を作成
   divElement.id = 'reply';
+
+  // ユーザーアイコン
+  const spanElement = document.createElement('span');
+  spanElement.className = 'user';
+  spanElement.id = 'user';
+
+  // ユーザー名
+  const bElement = document.createElement('b');
+  bElement.id = 'usernametext';
+  bElement.textContent = nickname[usernum];
+
   // div要素を中央コンテナの子要素として追加
   contentsDiv.appendChild(divElement);
+  divElement.appendChild(spanElement);
+  divElement.appendChild(bElement)
   divElement.appendChild(pElement);
 
   // textareaのクリア
@@ -173,5 +200,5 @@ function updateCount() {
 var span = document.getElementById('navigateSpan');
 //アイコンからプロフィールに画面遷移
 document.getElementById('userIcon').addEventListener('click', function() {
-  window.location.href = 'profile.html';
+  window.location.href = 'profile.html?user=' + usernum;
 });

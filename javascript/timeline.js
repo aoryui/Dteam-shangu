@@ -1,20 +1,26 @@
+// urlからuser取得
+const urlParams = new URLSearchParams(window.location.search);
+let usernum = urlParams.get('user');
+if (usernum == null){
+  usernum = 0;
+};
 const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
 const button3 = document.getElementById('postbtn');
 
 button1.addEventListener('click', () => {
     // 投稿に遷移
-    window.location.href = 'timeline.html';
+    window.location.href = 'timeline.html?user=' + usernum;
 });
 
 button2.addEventListener('click', () => {
     // 質問に遷移
-    window.location.href = 'question.html';
+    window.location.href = 'question.html?user=' + usernum;
 });
 
 button3.addEventListener('click', () => {
   // 質問に遷移
-  window.location.href = 'post.html';
+  window.location.href = 'post.html?user=' + usernum;
 });
 
 var PostText = {
@@ -110,7 +116,7 @@ const liTags = document.querySelectorAll('li'); // liタグを取得
 for (const liTag of liTags) {
   liTag.addEventListener('click', function() {
     const text = this.textContent;
-    window.location.href = 'tagsearch.html?tag=' +  encodeURIComponent(text); // URLを組み立てる
+    window.location.href = 'tagsearch.html?tag=' +  encodeURIComponent(text) + '&user=' + usernum;// URLを組み立てる
   });
 }
 
@@ -153,7 +159,7 @@ for (const h2Tag of h2Tags) {
       }
     }
 
-    window.location.href = 'article.html?title=' + encodeURIComponent(h2Text) + '&tag=' + encodeURIComponent(tagtext) + '&text=' + encodeURIComponent(articleText) + '&time=' + time + '&good=' + goodcount;
+    window.location.href = 'article.html?title=' + encodeURIComponent(h2Text) + '&tag=' + encodeURIComponent(tagtext) + '&text=' + encodeURIComponent(articleText) + '&time=' + time + '&good=' + goodcount + '&user=' + usernum;
   });
 }
 
@@ -164,7 +170,7 @@ inputElement.addEventListener('keydown', (event) => {
     const inputValue = event.target.value.trim(); // 空白削除
     if (inputValue) { // 入力値が空でない場合のみ処理を実行
       console.log(inputValue);
-      window.location.href = 'tagsearch.html?tag=' +  encodeURIComponent(inputValue);
+      window.location.href = 'tagsearch.html?tag=' +  encodeURIComponent(inputValue) + '&user=' + usernum;
     } else {
       // 何も入力されていない場合の処理
       alert('タグ名を入力してください');
@@ -173,5 +179,5 @@ inputElement.addEventListener('keydown', (event) => {
 });
 //アイコンからプロフィールに画面遷移
 document.getElementById('userIcon').addEventListener('click', function() {
-  window.location.href = 'profile.html';
+  window.location.href = 'profile.html?user=' + usernum;
 });
