@@ -5,7 +5,7 @@ let user = urlParams.get('user');
 const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
 const button3 = document.getElementById('postbtn');
-const button4 = document.getElementById('myButton');
+const logbtn = document.getElementById('logout');
 const cpbtn = document.getElementById("changepass");
 const modal = document.getElementById("myModal");
 
@@ -29,7 +29,7 @@ cpbtn.addEventListener('click', () => {
   window.location.href = 'changepass.html?user=' + user;
 });
 
-button4.addEventListener('click', () => {
+logbtn.addEventListener('click', () => {
   // ログアウトのメッセージボックス表示
   alert("ログアウトしました！");
   // ログインに遷移
