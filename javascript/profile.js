@@ -61,3 +61,7 @@ for (const liTag of liTags) {
     window.location.href = 'tagsearch.html?tag=' +  encodeURIComponent(text); // URLを組み立てる
   });
 }
+//アイコンからプロフィールに画面遷移
+document.getElementById('userIcon').addEventListener('click', function() {
+  window.location.href = 'profile.html';
+});

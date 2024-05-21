@@ -400,3 +400,7 @@ inputElement.addEventListener('keydown', (event) => {
     }
   }
 });
+//アイコンからプロフィールに画面遷移
+document.getElementById('userIcon').addEventListener('click', function() {
+  window.location.href = 'profile.html';
+});
