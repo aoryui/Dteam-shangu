@@ -116,19 +116,20 @@
 
 /* 全体コンテンツ */
 .Allcontainer {
+    width: 100%;
     display: flex;
 }
-.contents{
+.contents {
     flex: 1;
 }
 /* 左側コンテンツ */
 .left-contents {
-    float: left;
+    flex: 0 0 10%;
 }
 
 /* 中央コンテンツ */
 .center-contents {
-    float: left;
+    flex: 0 0 80%; /* 全体の80%の幅 */
 }
 
 .user-left img{
@@ -136,10 +137,9 @@
     height: 100%;
 }
 
-
 /* 右側コンテンツ */
 .right-contents {
-    float: left;
+    flex: 0 0 10%;
 }
 
 #post_title{
@@ -148,12 +148,6 @@
 
 #post_tag{
     float: left;
-}
-
-/* 右側コンテンツ */
-.right-contents {
-    float:left;
-    width: 15%;
 }
 
 /* 投稿 */
