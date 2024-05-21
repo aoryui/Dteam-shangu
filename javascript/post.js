@@ -57,3 +57,7 @@ function post(){
     // articleに入力をもってくよ！
     window.location.href = 'article.html?title=' + convertedTitle + '&tag=' + convertedTag + '&text=' + convertedText + '&time=' + time;
 };
+//アイコンからプロフィールに画面遷移
+document.getElementById('userIcon').addEventListener('click', function() {
+    window.location.href = 'profile.html';
+  });

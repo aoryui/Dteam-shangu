@@ -56,3 +56,8 @@ function post() {
     answerDisplay.innerHTML = answer;
     time.textContent = year + '/' + month + '/' + day + '  ' +  hours + ':' + minutes;
 }
+
+//アイコンからプロフィールに画面遷移
+document.getElementById('userIcon').addEventListener('click', function() {
+    window.location.href = 'profile.html';
+  });
