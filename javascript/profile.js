@@ -1,6 +1,9 @@
 // ユーザーナンバーをuserに代入
 const urlParams = new URLSearchParams(window.location.search);
 let user = urlParams.get('user');
+if (user == null){
+  user = 0;
+};
 
 const button1 = document.getElementById('timeline');
 const button2 = document.getElementById('question');
@@ -13,15 +16,15 @@ const span = document.getElementsByClassName("close")[0];
 
 button1.addEventListener('click', () => {
     // 投稿に遷移
-    window.location.href = 'timeline.html';
+    window.location.href = 'timeline.html?user=' + user;
 });
 button2.addEventListener('click', () => {
     // 質問に遷移
-    window.location.href = 'question.html';
+    window.location.href = 'question.html?user=' + user;
 });
 button3.addEventListener('click', () => {
   // 質問に遷移
-  window.location.href = 'post.html';
+  window.location.href = 'post.html?user=' + user;
 });
 
 cpbtn.addEventListener('click', () => {
@@ -58,10 +61,10 @@ const liTags = document.querySelectorAll('li'); // liタグを取得
 for (const liTag of liTags) {
   liTag.addEventListener('click', function() {
     const text = this.textContent;
-    window.location.href = 'tagsearch.html?tag=' +  encodeURIComponent(text); // URLを組み立てる
+    window.location.href = 'tagsearch.html?tag=' +  encodeURIComponent(text) + '&user=' + user; // URLを組み立てる
   });
 }
 //アイコンからプロフィールに画面遷移
 document.getElementById('userIcon').addEventListener('click', function() {
-  window.location.href = 'profile.html';
+  window.location.href = 'profile.html?user=' + user;
 });

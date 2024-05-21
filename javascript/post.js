@@ -1,3 +1,10 @@
+// urlからuser
+const urlParams = new URLSearchParams(window.location.search);
+let usernum = urlParams.get('user');
+if (usernum == null){
+  usernum = 0;
+};
+
 const Post_Text = document.getElementById('post_text');
 const Post_Title = document.getElementById('post_title');
 const Post_Tag = document.getElementById('post_tag');
@@ -12,13 +19,13 @@ const timeDisplay = document.getElementById('time');
 
 button1.addEventListener('click', () => {
     // ページ1に遷移
-    window.location.href = 'timeline.html';
+    window.location.href = 'timeline.html?user=' + usernum;
 });
 
 
 button2.addEventListener('click', () => {
     // ページ3に遷移
-    window.location.href = 'question.html';
+    window.location.href = 'question.html?user=' + usernum;
 });
 
 
@@ -55,9 +62,9 @@ function post(){
     var time = `${year}/${month}/${day}`
 
     // articleに入力をもってくよ！
-    window.location.href = 'article.html?title=' + convertedTitle + '&tag=' + convertedTag + '&text=' + convertedText + '&time=' + time;
+    window.location.href = 'article.html?title=' + convertedTitle + '&tag=' + convertedTag + '&text=' + convertedText + '&time=' + time + '&user=' + usernum;
 };
 //アイコンからプロフィールに画面遷移
 document.getElementById('userIcon').addEventListener('click', function() {
-    window.location.href = 'profile.html';
-  });
+    window.location.href = 'profile.html?user=' + usernum;
+});
