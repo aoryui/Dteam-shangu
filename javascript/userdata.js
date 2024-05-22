@@ -14,21 +14,21 @@ var passdic = { // パスワード
 }
 
 var userimg = { // 画像
-    0:"image/しいたけ.jpg",
+    0:"image/icon.png",
     1:"image/一郎.jpg",
     2:"image/二郎.jpg",
     3:"image/noimage.jpg"
 }
 
 var nickname = { // ニックネーム
-    0:"しき　たけしい",
+    0:"に　たけしい",
     1:"いちろう",
     2:"ジロウ",
     3:"サブロー"
 }
 
 var realname = { // 本名
-    0:"式　　茸椎",
+    0:"弐　　茸椎",
     1:"山口一郎",
     2:"拉麺二郎",
     3:"太平三郎"

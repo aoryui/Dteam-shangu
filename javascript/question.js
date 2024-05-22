@@ -37,8 +37,8 @@ document.getElementById('displayButton').addEventListener('click', function () {
 });
 
 if (titletext != null) { //question.jsが直接開かれた場合、要素の置き換えをしない
-  const questionTextElement = document.getElementById('questiontext');
-  questionTextElement.textContent = titletext;
+    const questionTextElement = document.getElementById('questiontext');
+    questionTextElement.textContent = titletext;
 }
 
 
