@@ -79,17 +79,6 @@ var tag3 = { // タグ ユーザー3
     
 }
 
-
-var QuestionText = {
-    1:"質問1",
-    2:"質問2",
-    3:"質問3",
-    4:"質問4",
-    5:"質問5",
-    6:"質問6",
-    7:"質問7"
-};
-
 var PostText = {
     1:"AWSの始め方",
     2:"Dockerが開発を変える！",
@@ -132,12 +121,39 @@ var PostArticle = {
 7:"Pythonの環境構築について解説します。<br>Pythonのサイトからダウンロードして、<br>環境変数設定して、<br>完成！",
 };
 
-var AnswerText = {
-    1:"回答1",
-    2:"回答2",
-    3:"回答3",
-    4:"回答4",
-    5:"回答5",
-    6:"回答6",
-    7:"回答7"
+var QuestionText = {
+    1:"Pythonのimportとfromの違いがわかりません。",
+    2:"JavaとJavaScriptってなにか関係あるんですか？",
+    3:"Cの「#include <stdio.h>」ってなにしてるの？",
+    4:"HTMLの<br>と<p>の使い分けがわかりません。",
+    5:"Flutterの画面遷移の実装が出来ません。",
+    6:"Rstudioのバージョンアップでpackageが使えなくなってしまいました。",
+    7:"環境変数を設定したのにPythonが使えないです。"
 };
+
+var AnswerText = {
+    1:"モジュールの全体を利用するのがimportで、 モジュールの一部(変数や関数だと思ってください。)を利用するのがfromです。",
+    2:"JavaScriptがJavaの名前を真似しただけで、関係はないです。",
+    3:"printfとかに使うヘッダーファイルを読み込むやつです。",
+    4:"brは改行、pは段落です。",
+    5:"Navigatorを使えばいいんじゃないかな。",
+    6:"パッケージ名に間違いはありませんか?",
+    7:"ディレクトリ合ってますか？"
+};
+var AnswerTextQuestion = {
+    1:"Pythonのimportとfromの違いがわかりません。",
+    2:"JavaとJavaScriptってなにか関係あるんですか？",
+    3:"Cの「#include <stdio.h>」ってなにしてるの？",
+    4:"HTMLの<br>と<p>の使い分けがわかりません。",
+    5:"Flutterの画面遷移の実装が出来ません。",
+    6:"Rstudioのバージョンアップでpackageが使えなくなってしまいました。",
+    7:"環境変数を設定したのにPythonが使えないです。"
+};
+
+var AnswerTime1 = {1:"2024", 2:"04", 3:"22"}
+var AnswerTime2 = {1:"2024", 2:"03", 3:"19"}
+var AnswerTime3 = {1:"2024", 2:"03", 3:"03"}
+var AnswerTime4 = {1:"2024", 2:"03", 3:"02"}
+var AnswerTime5 = {1:"2024", 2:"02", 3:"29"}
+var AnswerTime6 = {1:"2024", 2:"02", 3:"28"}
+var AnswerTime7 = {1:"2024", 2:"02", 3:"20"}
