@@ -130,7 +130,7 @@ button:hover {
 }
 
 
-#contents {
+.contents {
     width: 1000px;
     margin: 30px auto;
     padding: 20px;
@@ -188,6 +188,7 @@ button:hover {
     text-align: right;
 }
 
+
 #contents {
     width: 1000px;
     margin: 30px auto;
@@ -207,17 +208,32 @@ textarea {
 
 /* グッドボタン */
 #goodbtn {
-    display: none;
+    /* position: fixed; */
+    background-color: transparent;
+    border: none;
     /* float: right; */
+    /* margin-top: 50px; */
+    display: none;
+}
+
+#goodbtn:hover {
+    cursor: pointer;
+}
+
+#good-count {
+    /* position: fixed; */
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    display: none;
+    margin: 10px 0px 0px;
+}
+
+#goodgroup {
+    text-align: right;
 }
 
 /* 時間表示 */
 #time {
     float: right;
-}
-
-/*  */
-#goodbtncontents {
-    text-align: right;
-    display: none;
 }
