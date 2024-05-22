@@ -275,3 +275,48 @@ h2:hover {
     cursor: pointer;
     text-decoration: underline;
 }
+
+/*  */
+#contents {
+    width: 800px; /* コンテンツの幅 */
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* タグ */
+li {
+    display: inline-block;
+    margin: 0 .5em .7em 0;
+    margin-top: 10px;
+    padding: .8em;
+    margin-bottom: 0px;
+    line-height: .3;
+    text-decoration: none;
+    color: #000000;
+    background-color: #EDEEEE;
+    border-radius: 5em;
+}
+
+li:before {
+    content: "#";
+}
+
+li:hover { 
+    cursor: pointer;
+}
+
+#contents a {
+    float: right;
+}
+
+h2 {
+    margin: 0px 0px 0px 0px;
+    font-size: 20px;
+}
+h2:hover { 
+    cursor: pointer;
+    text-decoration: underline;
+}
