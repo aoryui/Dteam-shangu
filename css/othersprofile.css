@@ -183,17 +183,17 @@
 /* 3つのボタンの三分割 */
 .post-header{
     float: left;
-    width: 33%;
+    width: 33.3%;
 }
 
 .question-header{
     float: left;
-    width: 33%;
+    width: 33.3%;
 }
 
 .answer-header{
     float: left;
-    width: 33%;
+    width: 33.3%;
 }
 
 #usertimeline{
