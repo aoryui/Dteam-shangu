@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>投稿ページ</title>
-  <link rel="stylesheet" type="text/css" href="./css/othersprofile.css">
+  <title>プログラミング情報共有サイト</title>
+  <link rel="stylesheet" type="text/css" href="./css/question.css">
 </head>
 
 <body class="body">
@@ -33,8 +32,6 @@
         </path>
       </svg>
     </button>
-    
-   
   </div>
   <!-- ヘッダー下部 -->
   <div class="header2">
@@ -45,36 +42,31 @@
       <button class="questionbtn" id="question">質問</button>
     </div>
   </div>
-</body>
-<!-- ポスト -->
-<div class="Allcontainer">
-  <div class="contents left-contents"></div>
-  <div class="contents center-contents">
-    <div id="contents">
-      <div class="usercontents user-left">
-        <img src="image/profileimage.jpg" id="profileimage" alt="ユーザープロファイル">
-      </div>
-      <div class="usercontents user-center">
-        <p><span class="nickname">ジンクス</span></p>
-        <p><span class="realname">楠仁</span></p>
-        <p><a href="mailto:jinx@st.kobedenshi.ac.jp">jinx@st.kobedenshi.ac.jp</a></p>
-      </div>
-      <div class="usercontents user-right"></div>
-    </div>
-    <div class="header2">
-      <div class="left-item">
-        <button class="timelinebtn" id="usertimeline">ポスト</button>
-      </div>
-      <div class="center-item">
-        <button class="questionbtn" id="userquestion">質問</button>
-      </div>
-      <div class="right-item">
-        <button class="questionbtn" id="useranswer">回答</button>
-      </div>
-    </div>
-    <div class="timeline">
-      
-    </div>
+
+
+
+  <!-- 質問入力欄 -->
+  <!-- <input type="text" id="questionInput" placeholder="質問を入力してください"> -->
+  <div id="contents">
+    <form id="post-container">
+      <div id="questiontext">Hello Worldするための基本構文はなんですか？</div>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <div id="contents">
+    <form id="post-container">
+      <div id="time"></div><br>
+      <div id="answerDisplay"></div>
+      <svg id="goodbtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="display: block;">
+        <path id="iconPath" d="M14.5998 8.00033H21C22.1046 8.00033 23 8.89576 23 10.0003V12.1047C23 12.3659 22.9488 12.6246 22.8494 12.8662L19.755 20.3811C19.6007 20.7558 19.2355 21.0003 18.8303 21.0003H2C1.44772 21.0003 1 20.5526 1 20.0003V10.0003C1 9.44804 1.44772 9.00033 2 9.00033H5.48184C5.80677 9.00033 6.11143 8.84246 6.29881 8.57701L11.7522 0.851355C11.8947 0.649486 12.1633 0.581978 12.3843 0.692483L14.1984 1.59951C15.25 2.12534 15.7931 3.31292 15.5031 4.45235L14.5998 8.00033ZM7 10.5878V19.0003H18.1606L21 12.1047V10.0003H14.5998C13.2951 10.0003 12.3398 8.77128 12.6616 7.50691L13.5649 3.95894C13.6229 3.73105 13.5143 3.49353 13.3039 3.38837L12.6428 3.0578L7.93275 9.73038C7.68285 10.0844 7.36341 10.3746 7 10.5878ZM5 11.0003H3V19.0003H5V11.0003Z">
+        </path>
+      </svg>
+    </form>
+  </div>
+
+
+  
   </div>
   <div class="contents right-contents">
     <button id="postbtn">
@@ -85,15 +77,10 @@
       </svg>
     </button>
   </div>
-</div>
+  </div>
 
-<footer>
-  <p>&copy; team D</p>
-</footer>
-
-<!-- JavaScriptファイルを読み込む -->
-<script src="./javascript/userdata.js"></script>
-<script src="./javascript/othersprofile.js"></script>
-
+  <!-- JavaScriptファイルを読み込む -->
+  <script src="./javascript/question.js"></script>
+</body>
 
 </html>
