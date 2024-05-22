@@ -28,6 +28,11 @@
     background-color: transparent;
     border:none;
 }
+#notice{
+    
+			top: 200px;
+			left: 588px;
+}
 
 
 /* 検索ボックス */
@@ -35,12 +40,18 @@
     float: right;
     font-size: 25px;
     margin-top: 5px;
+    position:relative;
+	top: 50px;
+	left:50px;
 }
 
 #notice{
     float: right;
     background-color: transparent;
     border: none;
+    position:relative;
+	top: 50px;
+	left:50px;
 }
 
 #userIcon{
@@ -167,6 +178,17 @@
 .usercontents{
     flex: 1;
 }
+
+#take{
+    font-weight: bold;
+}
+
+#Tagu {
+    position:relative;
+			top: 100px;
+			left: 10px;
+}
+
 /* 左側コンテンツ */
 .user-left {
     float: left;
