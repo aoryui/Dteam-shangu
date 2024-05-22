@@ -1,8 +1,8 @@
 //urlからuser取得
 const urlParams = new URLSearchParams(window.location.search);
 let usernum = urlParams.get('user');
-if (usernum == null){
-  usernum = 0;
+if (usernum == null) {
+    usernum = 0;
 };
 // DOM要素を取得
 const inputField = document.getElementById('inputField');
@@ -26,10 +26,13 @@ button2.addEventListener('click', () => {
 });
 
 button3.addEventListener('click', () => {
-  // 質問に遷移
-  window.location.href = 'post.html?user=' + usernum;
+    // 質問に遷移
+    window.location.href = 'post.html?user=' + usernum;
 });
 
+document.getElementById('displayButton').addEventListener('click', function () {
+    document.getElementById('goodbtn').style.display = 'block';
+});
 
 
 
@@ -46,24 +49,26 @@ function post() {
     // 時、分、秒を取得
     var hours = clickTime.getHours();
     var minutes = clickTime.getMinutes();
-    
+
     var year = currentDate.getFullYear();
     var month = currentDate.getMonth() + 1;
     var day = currentDate.getDate();
-    
+
     // 回答表示用の要素を取得
     var answerDisplay = document.getElementById('answerDisplay');
     var time = document.getElementById('time');
-    
+
     // 質問に対する回答を設定（ここでは単純に質問に対するメッセージを設定）
     var answer = "質問に対する回答: " + question;
-    
+
     // 回答を表示
+    time.textContent = year + '/' + month + '/' + day + '  ' + hours + ':' + minutes;
     answerDisplay.innerHTML = answer;
-    time.textContent = year + '/' + month + '/' + day + '  ' +  hours + ':' + minutes;
+
+
 }
 
 //アイコンからプロフィールに画面遷移
-document.getElementById('userIcon').addEventListener('click', function() {
+document.getElementById('userIcon').addEventListener('click', function () {
     window.location.href = 'profile.html?user=' + usernum;
-  });
+});
