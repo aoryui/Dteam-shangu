@@ -245,13 +245,13 @@
     font-weight: bold;
     font-size: larger;
     position:relative;
-			top: 50px;
+			top: 10px;
 			left:20px;
 }
 
 #Tagu {
     position:relative;
-			top: 100px;
+			top: 10px;
 			left: 10px;
 }
 
@@ -297,6 +297,11 @@ li:hover {
 }
 
 #postbtn:hover { 
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+h2:hover { 
     cursor: pointer;
     text-decoration: underline;
 }
