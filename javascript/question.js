@@ -1,5 +1,6 @@
 //urlからuser取得
 const urlParams = new URLSearchParams(window.location.search);
+let titletext = urlParams.get('title');
 let usernum = urlParams.get('user');
 if (usernum == null) {
     usernum = 0;
@@ -35,7 +36,10 @@ document.getElementById('displayButton').addEventListener('click', function () {
     document.getElementById('good-count').style.display = 'inline-block';
 });
 
-
+if (titletext != null) { //question.jsが直接開かれた場合、要素の置き換えをしない
+  const questionTextElement = document.getElementById('questiontext');
+  questionTextElement.textContent = titletext;
+}
 
 
 function post() {
