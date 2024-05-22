@@ -186,6 +186,30 @@ function clickquestion(){// 質問画面に遷移
 }
 clickquestion()
 
+function clickanswer(){// 記事画面に遷移
+  // 記事画面に遷移
+  const h2Tags = document.querySelectorAll('h2');
+
+  for (const h2Tag of h2Tags) {
+    h2Tag.addEventListener('click', function(event) {
+      // クリックされたh2要素
+      const clickedH2 = event.currentTarget;
+
+      // div要素内の情報取得
+      const h2Text = clickedH2.textContent;
+
+      // 本文設定
+      for (const key in AnswerText) {
+        if (AnswerText[key] === h2Text) { // タイトルの配列キーを取得
+          var articleText = AnswerTextQuestion[key] // articleTextに本文を代入
+        }
+      }
+
+      window.location.href = 'question4.html?answer=' + encodeURIComponent(h2Text) + '&title=' + encodeURIComponent(articleText) + '&user=' + user;
+    });
+  }
+}
+
 function clickarticle(){// 記事画面に遷移
   // 記事画面に遷移
   const h2Tags = document.querySelectorAll('h2');

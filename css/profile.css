@@ -179,6 +179,10 @@
     flex: 1;
 }
 
+#take{
+    font-weight: bold;
+}
+
 #Tagu {
     position:relative;
 			top: 100px;
