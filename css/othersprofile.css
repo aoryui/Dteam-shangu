@@ -278,7 +278,7 @@ h2:hover {
 
 /*  */
 #contents {
-    width: 800px; /* コンテンツの幅 */
+    width: 1000px; /* コンテンツの幅 */
     margin: 30px auto;
     padding: 20px;
     border: 1px solid #ccc;
