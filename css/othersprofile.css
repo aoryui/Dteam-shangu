@@ -28,6 +28,11 @@
     background-color: transparent;
     border:none;
 }
+#notice{
+    
+			top: 200px;
+			left: 588px;
+}
 
 
 /* 検索ボックス */
@@ -35,12 +40,18 @@
     float: right;
     font-size: 25px;
     margin-top: 5px;
+    position:relative;
+	top: 50px;
+	left:50px;
 }
 
 #notice{
     float: right;
     background-color: transparent;
     border: none;
+    position:relative;
+	top: 50px;
+	left:50px;
 }
 
 #userIcon{
@@ -152,34 +163,6 @@
     float: left;
 }
 
-/* 投稿 */
-#contents {
-    display: flex;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: none;
-    margin-right: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.usercontents{
-    flex: 1;
-}
-/* 左側コンテンツ */
-.user-left {
-    float: left;
-}
-.user-center {
-    float: none;
-}
-/* 右側コンテンツ */
-.user-right {
-    float: right;
-}
-
-
 /* 3つのボタンの三分割 */
 .post-header{
     float: left;
@@ -238,6 +221,49 @@
     background: #86c7f5;
 }
 
+/* 投稿 */
+#contents {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: none;
+    margin-right: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.usercontents{
+    flex: 1;
+}
+
+
+#take{
+    font-weight: bold;
+    font-size: larger;
+    position:relative;
+			top: 10px;
+			left:20px;
+}
+
+#Tagu {
+    position:relative;
+			top: 10px;
+			left: 10px;
+}
+
+/* 左側コンテンツ */
+.user-left {
+    float: left;
+}
+.user-center {
+    float: none;
+}
+/* 右側コンテンツ */
+.user-right {
+    float: right;
+}
+
 /* タグ */
 li {
     display: inline-block;
@@ -255,11 +281,7 @@ li:before {
 li:hover { 
     cursor: pointer;
 }
-/*タイムライン内のフォント指定*/
-h2:hover { 
-    cursor: pointer;
-    text-decoration: underline;
-}
+
 /* 投稿ボタン */
 #postbtn {
     position: fixed;
@@ -276,46 +298,6 @@ h2:hover {
     text-decoration: underline;
 }
 
-/*  */
-#contents {
-    width: 1000px; /* コンテンツの幅 */
-    margin: 30px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* タグ */
-li {
-    display: inline-block;
-    margin: 0 .5em .7em 0;
-    margin-top: 10px;
-    padding: .8em;
-    margin-bottom: 0px;
-    line-height: .3;
-    text-decoration: none;
-    color: #000000;
-    background-color: #EDEEEE;
-    border-radius: 5em;
-}
-
-li:before {
-    content: "#";
-}
-
-li:hover { 
-    cursor: pointer;
-}
-
-#contents a {
-    float: right;
-}
-
-h2 {
-    margin: 0px 0px 0px 0px;
-    font-size: 20px;
-}
 h2:hover { 
     cursor: pointer;
     text-decoration: underline;
