@@ -301,11 +301,15 @@ function clickarticle(){// 記事画面に遷移
       for (const item of listItems) {
         listText.push(item.textContent);
       }
-      const arr =listText;
-      const tagtext = arr.join(' ');
 
       // 本文設定
       titlelist = eval("PostText"); // タグ名からタイトルの連想配列を作る
+      for (const key in titlelist) {
+        if (titlelist[key] === h2Text) { // タイトルの配列キーを取得
+          taglist = eval("PostTag" + key);
+        }
+      }
+      const tagtext = taglist[1];
       text = eval("PostArticle"); // タグ名から本文の配列を作る
       for (const key in titlelist) {
         if (titlelist[key] === h2Text) { // タイトルの配列キーを取得
@@ -320,7 +324,7 @@ function clickarticle(){// 記事画面に遷移
         }
       }
 
-      window.location.href = 'article.html?title=' + encodeURIComponent(h2Text) + '&tag=' + encodeURIComponent(tagtext) + '&text=' + encodeURIComponent(articleText) + '&time=' + time + '&good=' + goodcount + '&user=' + user;
+      window.location.href = 'article.html?title=' + encodeURIComponent(h2Text) + '&tag=' + encodeURIComponent(tagtext) + '&text=' + encodeURIComponent(articleText) + '&time=' + time + '&good=' + goodcount + '&postuser=' + user + '&user=' + user;
     });
   }
 }

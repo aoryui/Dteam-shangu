@@ -30,6 +30,10 @@ button3.addEventListener('click', () => {
     // 質問に遷移
     window.location.href = 'post.html?user=' + usernum;
 });
+//アイコンからプロフィールに画面遷移
+document.getElementById('userIcon').addEventListener('click', function() {
+    window.location.href = 'profile.html?user=' + usernum;
+  });
 
 document.getElementById('displayButton').addEventListener('click', function () {
     document.getElementById('goodbtn').style.display = 'inline-block';

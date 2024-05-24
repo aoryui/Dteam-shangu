@@ -62,7 +62,7 @@ function post(){
     var time = `${year}/${month}/${day}`
 
     // articleに入力をもってくよ！
-    window.location.href = 'article.html?title=' + convertedTitle + '&tag=' + convertedTag + '&text=' + convertedText + '&time=' + time + '&user=' + usernum;
+    window.location.href = 'article.html?title=' + convertedTitle + '&tag=' + convertedTag + '&text=' + convertedText + '&time=' + time + '&postuser=' + usernum +'&user=' + usernum;
 };
 //アイコンからプロフィールに画面遷移
 document.getElementById('userIcon').addEventListener('click', function() {

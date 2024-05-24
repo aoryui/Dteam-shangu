@@ -6,6 +6,7 @@ let title = urlParams.get('title');
 let tag = urlParams.get('tag');
 let text = urlParams.get('text');
 let time = urlParams.get('time');
+let postuser = urlParams.get('postuser');
 let usernum = urlParams.get('user');
 if (usernum == null){
   usernum = 0;
@@ -32,17 +33,27 @@ button3.addEventListener('click', () => {
   window.location.href = 'post.html?user=' + usernum;
 });
 
-user.addEventListener('click', () => {
-  // 他ユーザーのプロフィール画面へ遷移
+function profiletrans(){ // ユーザークリックで遷移
+  if(postuser){
+    window.location.href = 'profile.html?user=' + postuser;
+  }else{
+    // 他ユーザーのプロフィール画面へ遷移
   window.location.href = 'othersprofile.html';
+  }
+}
+
+user.addEventListener('click', () => {
+  profiletrans()
 });
 usernametext.addEventListener('click', () => {
-  // 他ユーザーのプロフィール画面へ遷移
-  window.location.href = 'othersprofile.html';
+  profiletrans()
 });
 
 if (time != null) { //article.htmlが直接開かれた場合、要素の置き換えをしない
   const contentsDiv = document.getElementById('contents');
+  if(postuser){
+    contentsDiv.querySelector('b').textContent = nickname[postuser];
+  }
   contentsDiv.querySelector('a').textContent = time;
   contentsDiv.querySelector('h1').textContent = title;
   const tags = tag.split(' ');
@@ -71,8 +82,6 @@ if (time != null) { //article.htmlが直接開かれた場合、要素の置き�
     contentsDiv.appendChild(newP);
   });
 }
-
-
 
 // タグをクリックしたらtagsearch.htmlへ遷移
 const liTags = document.querySelectorAll('li'); // liタグを取得
