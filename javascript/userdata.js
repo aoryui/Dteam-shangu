@@ -14,7 +14,7 @@ var passdic = { // パスワード
 }
 
 var userimg = { // 画像
-    0:"image/icon.png",
+    0:"image/しいたけ.jpg",
     1:"image/一郎.jpg",
     2:"image/二郎.jpg",
     3:"image/noimage.jpg"
