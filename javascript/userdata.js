@@ -1,6 +1,6 @@
 // ユーザーデータを保存するJavaScript
 var emaildic = { //メールアドレス
-    0:"kd1@st.kobedenshi.ac.jp",
+    0:"kd0@st.kobedenshi.ac.jp",
     1:"kd1@st.kobedenshi.ac.jp",
     2:"kd2@st.kobedenshi.ac.jp",
     3:"kd3@st.kobedenshi.ac.jp"
