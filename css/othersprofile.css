@@ -11,6 +11,14 @@
     padding: 0px;
 }
 
+#takashi{
+    font-weight: bold;
+    font-size: larger;
+    position:relative;
+			top: 10px;
+			left:20px;
+}
+
 #changepass {
     background-color: #68B7F0;
     color: white;
